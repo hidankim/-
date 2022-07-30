@@ -10,6 +10,7 @@ var pageFirst = first;
 var pageYear;
 var mainTodayDay = document.getElementById('main-day');
 var mainTodayDate = document.getElementById('main-date');
+var mainNowweek = document.getElementById('main-week_HB');
 if(first.getFullYear() % 4 === 0){
     pageYear = leapYear;
 }else{
@@ -116,9 +117,16 @@ function next(){
 }
 
 currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;' + first.getFullYear();
+
+HB_currentdate = new Date();
+var HB_oneJan = new Date(HB_currentdate.getFullYear(),0,1);
+var HB_numberOfDays = Math.floor((HB_currentdate - HB_oneJan) / (24 * 60 * 60 * 1000));
+var HB_result = Math.ceil(( HB_currentdate.getDay() + 1 + HB_numberOfDays) / 7);
+
 function showMain(){
     mainTodayDay.innerHTML = dayList[today.getDay()];
     mainTodayDate.innerHTML = today.getDate();
+    mainNowweek.innerHTML = HB_result;
 }
 showMain();
 
