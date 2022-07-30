@@ -118,15 +118,14 @@ function next(){
 
 currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;' + first.getFullYear();
 
-HB_currentdate = new Date();
-var HB_oneJan = new Date(HB_currentdate.getFullYear(),0,1);
-var HB_numberOfDays = Math.floor((HB_currentdate - HB_oneJan) / (24 * 60 * 60 * 1000));
-var HB_result = Math.ceil(( HB_currentdate.getDay() + 1 + HB_numberOfDays) / 7);
-
-function showMain(){
+    function showMain(){
+        // HB_currentdate = new Date();
+        // var HB_oneJan = new Date(HB_currentdate.getFullYear(),0,1);
+        // var HB_numberOfDays = Math.floor((HB_currentdate - HB_oneJan) / (24 * 60 * 60 * 1000));
+        // var HB_result = Math.ceil(( HB_currentdate.getDay() + 1 + HB_numberOfDays) / 7);
     mainTodayDay.innerHTML = dayList[today.getDay()];
     mainTodayDate.innerHTML = today.getDate();
-    mainNowweek.innerHTML = HB_result;
+    mainNowweek.innerHTML = today.getDate()/7;
 }
 showMain();
 
