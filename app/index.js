@@ -236,6 +236,6 @@ function addTodoList(){
 }
 console.log(keyValue);
 function checkList(e){
-    var win = window.open("http://naver.com/", "", "_blank");
+    var win = window.open("https://google.com/", "", "_blank");
     // e.currentTarget.classList.add('checked');
 }
