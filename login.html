@@ -4,15 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="loginbackground">
-        <form class="box" action="login.html" method="POST">
-            <input type="password" name="" placeholder="Enter PIN" id="PIN">
-            <input type="submit" name="" value="go">
-        </form>
+    <section class="header">
+        <nav>
+            <div class="logo">
+                <h4>위드경제</h4>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="login.html">메인</a>
+                </li>
+                <li>
+                    <a href="#">다운로드</a>
+                </li>
+                <li>
+                    <a href="usermanual.html">사용방법</a>
+                </li>
+                <li>
+                    <a href="#">동아리 소개</a>
+                </li>
+
+            </ul>
+        </nav>
+    </section>
+
+        <div class="text-box">
+            <h1>With 청심</h1>
+            <h2>청심국제중고등학교 수행평가 알리미</h2>
+        </div>
+
+        
+
+        <div class="text-box2">
+            <p>안녕하세요! 청심국제중고등학교 동아리 위드경제 입니다. 학교특성상 수행평가가 많아 관리하는 것에 불편함이 존재하나, 현재 이를 체계적으로 관리해줄 엡이나 다른 방안이 없어 우리동아리에서 직접 개발하여 편의를 제공하려고 합니다! 이용해주셔서 감사합니다 :D</p>
+        </div>
+
+    
+
+    <div class="container">
+        <a href="#" class="button" id="button">입장하기</a>
     </div>
+
+    <div class="container2">
+        <a href="#" class="button" id="button">회원가입</a>
+    </div>
+
+    <div class="popup">
+        <div class="popup-content">
+            <img src="pictures/722891.png" alt="" class="close" style="object-fit:contain;
+            width:20px;
+            height:20px;"/>
+            
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Eo_circle_pink_white_letter-w.svg/1024px-Eo_circle_pink_white_letter-w.svg.png" alt="">
+        <input type="password" placeholder="PIN">
+        <a href="index.html" class="button">입장하기</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("button").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "flex";
+        })
+
+        document.querySelector(".close").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "none";
+        })
+    </script>
+
+
 </body>
 </html>
