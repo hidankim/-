@@ -99,28 +99,6 @@ nav{
     color:rgba(44, 59, 156, 0.4)
 }
 
-.button1{
-    width: 200px;
-    padding: 30px;
-    display: flex;
-    position: absolute;
-    height: 200px;
-    border: 10px solid black
-}
-
-.button2{
-    width: 200px;
-    padding: 30px;
-    display: flex;
-    color: rgba(44, 59, 156, 0.4)
-}
-
-.button3{
-    position: static;
-    left: 100px;
-    top: 100px;
-}
-
 .container2{
     position: absolute;
     top: 50%;
