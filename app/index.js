@@ -125,9 +125,9 @@ currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;
         // var HB_result = Math.ceil(( HB_currentdate.getDay() + 1 + HB_numberOfDays) / 7);
     mainTodayDay.innerHTML = dayList[today.getDay()];
     mainTodayDate.innerHTML = today.getDate();
-    today_firstofm = new Date(today.getFullYear(), today.getMonth()-1, 1);
-    mainNowweek.innerHTML = "Week " + Math.floor((today.getDate() - (6 - today_firstofm.getDay()))/7 + 1);
-}
+    var SH_weeknum = (Math.floor(((today.getDate() - (7 - first.getDay()))/7) - 0.1) + 2);
+    mainNowweek.innerHTML = "Week " + SH_weeknum;
+    }
 showMain();
 
 var clickedDate1 = document.getElementById(today.getDate());
