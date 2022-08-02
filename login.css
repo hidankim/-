@@ -15,7 +15,7 @@ body{
 }
 
 .box{
-    width: 300px;
+    width: 200px;
     padding: 30px;
     display: flex;
     position: absolute;
@@ -24,20 +24,29 @@ body{
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 3000px;
+    color:rgba(44, 59, 156, 0.4)
 }
 
 .button1{
-    width: 300px;
+    width: 200px;
     padding: 30px;
     display: flex;
     position: absolute;
+    height: 200px;
+    border: 10px solid black
 }
 
 .button2{
-    width: 300px;
+    width: 200px;
     padding: 30px;
     display: flex;
+    color: rgba(44, 59, 156, 0.4)
 }
 
+.button3{
+    position: static;
+    left: 100px;
+    top: 100px;
+}
 
 
