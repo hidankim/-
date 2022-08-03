@@ -20,13 +20,14 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'Mouse Memoirs', sans-serif;
 }
 
 .logo{
     letter-spacing: 5px;
     font-size: 30px;
     color: black;
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 .nav-links{
@@ -69,5 +70,6 @@ nav{
     top: 30%;
     width: 600px;
     padding: 0px;
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'Do Hyeon', sans-serif;
+
 }
