@@ -27,7 +27,7 @@ font-family: 'Noto Sans KR', sans-serif;
 
 .logo{
     letter-spacing: 5px;
-    font-size: 30px;
+    font-size: 25px;
     color: black;
     font-family: 'Noto Sans', sans-serif;
 font-family: 'Noto Sans KR', sans-serif;
@@ -48,7 +48,7 @@ font-family: 'Noto Sans KR', sans-serif;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     color: black;
 }
 
@@ -69,7 +69,7 @@ font-family: 'Noto Sans KR', sans-serif;
 .text-box{
     position: absolute;
     left: 10%;
-    top: 10%;
+    top: 15%;
     width: 600px;
     padding: 0px;
     font-family: 'Noto Sans', sans-serif;
@@ -78,19 +78,19 @@ font-family: 'Noto Sans KR', sans-serif;
 }
 
 .text-box h1{
-    font-size: 130px;
+    font-size: 110px;
     margin-bottom: 0px;
 }
 
 .text-box h2{
     margin: 0px 0 20px;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .text-box2{
     position: absolute;
-    bottom: 15%;
-    width: 500px;
+    bottom: 11%;
+    width: 520px;
     left: 10%;
     font-family: 'Noto Sans', sans-serif;
 font-family: 'Noto Sans KR', sans-serif;
