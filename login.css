@@ -9,7 +9,7 @@ body{
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(165, 171, 191, 0.7),rgba(4,9,30,0.7)),url(pictures/csia.jpg);
+    color: white;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -101,7 +101,7 @@ nav{
 .container2{
     position: absolute;
     top: 50%;
-    left: 28%;
+    left: 26%;
     transform: transalte(-50%, -50%);
     text-align: center;
 }
