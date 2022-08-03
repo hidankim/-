@@ -104,22 +104,22 @@ nav{
 .container2{
     position: absolute;
     top: 50%;
-    left: 26%;
+    left: 27%;
     transform: transalte(-50%, -50%);
     text-align: center;
 }
 
 .button{
-    background: #643d93;
-    border:rgba(78, 94, 148, 0.7);
+    background: #8653c4;
+    border:rgba(255, 255, 255, 0.7);
     padding: 10px  40px 30px;
-    color: white;
+    color: #ffffff;
     font-weight: bolder;
     font-size: 30px;
     border-radius: 50px;
     text-decoration: none;
     transition: 0.4s;
-    width: 200px;
+    width: 220px;
     height: 50px;
     margin: 0 auto;
     padding: 0;
@@ -130,8 +130,7 @@ nav{
 }
 
 .button:hover{
-    background: #643d93;
-    color:rgb(0, 0, 0);
+    background: #8653c46a;
 }
 
 .popup{
