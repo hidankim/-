@@ -108,7 +108,7 @@ font-family: 'Noto Sans KR', sans-serif;
 .container2{
     position: absolute;
     top: 50%;
-    left: 27%;
+    left: 25.5%;
     transform: transalte(-50%, -50%);
     text-align: center;
 }
