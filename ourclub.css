@@ -21,13 +21,13 @@ nav{
     align-items: center;
     min-height: 8vh;
     font-family: 'Mouse Memoirs', sans-serif;
-
 }
 
 .logo{
     letter-spacing: 5px;
     font-size: 30px;
     color: black;
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 .nav-links{
