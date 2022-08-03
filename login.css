@@ -20,7 +20,8 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    font-family: 'Mouse Memoirs', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
 
 }
 
@@ -28,7 +29,8 @@ nav{
     letter-spacing: 5px;
     font-size: 30px;
     color: black;
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
 }
 
 .nav-links{
@@ -70,7 +72,8 @@ nav{
     top: 10%;
     width: 600px;
     padding: 0px;
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
 
 }
 
@@ -89,7 +92,8 @@ nav{
     bottom: 15%;
     width: 500px;
     left: 10%;
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
     font-size: 20px;
 }
 
@@ -126,7 +130,8 @@ nav{
     display: inline-block;
     line-height: 50px;
     text-align: center;
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
 }
 
 .button:hover{

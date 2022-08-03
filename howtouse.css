@@ -20,15 +20,16 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    font-family: 'Mouse Memoirs', sans-serif;
-
+    font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
 }
 
 .logo{
     letter-spacing: 5px;
     font-size: 30px;
     color: black;
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
 }
 
 .nav-links{
@@ -71,6 +72,6 @@ nav{
     top: 30%;
     width: 600px;
     padding: 0px;
-    font-family: 'Do Hyeon', sans-serif;
-
+    font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
 }
