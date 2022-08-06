@@ -114,7 +114,7 @@ font-family: 'Noto Sans KR', sans-serif;
 }
 
 .button{
-    background: #d7d4aa;
+    background: #7476c0;
     border:rgba(255, 255, 255, 0.7);
     padding: 10px  40px 30px;
     color: #ffffff;
@@ -135,7 +135,7 @@ font-family: 'Noto Sans KR', sans-serif;
 }
 
 .button:hover{
-    background: #d7d4aa58;
+    background: #b3b4d2;
 }
 
 .popup{
