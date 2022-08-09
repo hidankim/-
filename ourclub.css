@@ -15,12 +15,26 @@ body{
 }
 
 nav{
+    position: relative;
+    top:-40px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
+    min-height: 1vh;
     font-family: 'Noto Sans', sans-serif;
-font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+.clublogo{
+    position: relative;
+    bottom:-60px;
+    left: -100px;
+}
+
+.clubtext{
+    position: relative;
+    top:-50px;
 }
 
 .logo{
@@ -64,14 +78,33 @@ font-family: 'Noto Sans KR', sans-serif;
     width: 100%;
 }
 
+.intrologo{
+    position: relative;
+    right: -425px;
+    top: -700px;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.intrologo .logoicon{
+    position: relative;
+    right: -250px;
+    top: -150px;
+}
 
 .text-box{
     position: absolute;
     left: 50%;
-    top: 30%;
-    width: 600px;
-    padding: 0px;
+    top: 120%;
+    transform: translate(-50%, -50%);
+    padding: 1px;
     font-family: 'Noto Sans', sans-serif;
-font-family: 'Noto Sans KR', sans-serif;
-
+    font-family: 'Noto Sans KR', sans-serif;
 }
+
+.text-box .subtitle{
+    border-style: solid;
+    width: 10%;
+    text-align: center;
+}
+
