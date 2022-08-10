@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/index.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <title>calendar todo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <title>calendar</title>
   </head>
   <body>
     <div class="main">
@@ -36,31 +35,25 @@
                 <td class="sat" align="center">Sat</td>
               </tr>
             </thead>
-            <tbody id="calendar-body" class="calendar-body"></tbody>
+            <tbody id="calendar-body" class="calendar-body">
+              
+            </tbody>
           </table>
+          <div class="input-wrap">
+            <input
+              type="text"
+              id="input-box"
+              class="input-box"
+            />
+          </div>
         </div>
-        <div class="content-left">
-          <div class="main-wrap">
+        
+        <div class="main-wrap">
             <div id="main-week_HB" class="main-week_HB"></div>
             <div id="main-day" class="main-day"></div>
             <div id="main-date" class="main-date"></div>
-          </div>
-          <div class="todo-wrap">
-            <div class="todo-title">Todo List</div>
-            <div class="input-wrap">
-              <input
-                type="text"
-                placeholder="please write here!!"
-                id="input-box"
-                class="input-box"
-              />
-              <button type="button" id="input-data" class="input-data">
-                INPUT
-              </button>
-              <div id="input-list" class="input-list"></div>
-            </div>
-          </div>
         </div>
+
       </div>
     </div>
   </body>
