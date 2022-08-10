@@ -81,10 +81,11 @@ font-family: 'Noto Sans KR', sans-serif;
 .text-box{
     position: absolute;
     left: 50%;
-    top: 80%;
+    top: 75%;
     transform: translate(-50%, -50%);
     padding: 1px;
     padding-bottom: 50px;
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px; 
 }
