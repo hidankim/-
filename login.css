@@ -138,22 +138,78 @@ font-family: 'Noto Sans KR', sans-serif;
     background: #b3b4d2;
 }
 
+
 .modal-container{
-    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
+    transition: opacity 0.3s ease;
 }
 
-.modal {
+.modal-container.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal{
     background-color: #fff;
-    width: 600px;
-    max-width: 100%;
+    width: 500px;
+    max-width: 300%;
     padding: 30px 50px;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+} 
+
+.modal h1{
+    margin: 0;
+}
+
+.signup-btn{
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    transform: transalte(-50%, -50%);
+    text-align: center;
+    background: #7476c0;
+    border:rgba(255, 255, 255, 0.7);
+    padding: 0px;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.4s;
+    width: 220px;
+    height: 50px;
+    margin: 0 auto;
+    line-height: 50px;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.signup-btn:hover{
+    background: #b3b4d2;
+}
+
+input{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.closebtn{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    cursor: pointer;
 }
