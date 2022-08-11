@@ -46,6 +46,8 @@ nav{
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+
+
 .nav-links{
     display: flex;
     justify-content: space-around;
@@ -161,13 +163,15 @@ font-family: 'Noto Sans KR', sans-serif;
 
 .modal{
     background-color: #fff;
-    width: 500px;
+    width: 350px;
+    height: 200px;
     max-width: 300%;
     padding: 30px 50px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
     position: relative;
+    font-size: 15px;
 } 
 
 .modal h1{
