@@ -81,21 +81,37 @@ font-family: 'Noto Sans KR', sans-serif;
 .intrologo{
     position: relative;
     right: -425px;
-    top: -700px;
+    top: -580px;
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Noto Sans KR', sans-serif;
+    
 }
 
-.intrologo .logoicon{
+.intrologo .logokor{
     position: relative;
-    right: -250px;
-    top: -150px;
+    left: 0px;
+    top: 20px;
+    font-size: 45px;
 }
+
+.intrologo .logoeng{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    font-size: 20px;
+}
+ 
+.intrologo .logoicon{
+    position: relative; 
+    right: -200px; 
+    top: -140px; 
+}
+
 
 .text-box{
     position: absolute;
     left: 50%;
-    top: 120%;
+    top: 150%;
     transform: translate(-50%, -50%);
     padding: 1px;
     font-family: 'Noto Sans', sans-serif;
