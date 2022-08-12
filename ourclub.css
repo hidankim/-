@@ -131,3 +131,9 @@ font-family: 'Noto Sans KR', sans-serif;
     text-align: center;
 }
 
+.withcslogo{
+    position: relative;
+    top: -820px;
+    width: 80px;
+}
+
