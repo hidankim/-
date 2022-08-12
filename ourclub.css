@@ -117,7 +117,7 @@ font-family: 'Noto Sans KR', sans-serif;
 .text-box{
     position: absolute;
     left: 50%;
-    top: 140%;
+    top: 135%;
     transform: translate(-50%, -50%);
     padding: 1px;
     font-family: 'Noto Sans', sans-serif;
@@ -133,7 +133,7 @@ font-family: 'Noto Sans KR', sans-serif;
 
 .withcslogo{
     position: relative;
-    top: -820px;
+    top: -840px;
     width: 80px;
 }
 
