@@ -12,8 +12,8 @@ closebtn.addEventListener('click', () => {
 });
 
 const singupbtn = document.getElementById('singupbtn');
-const modal_container2 = document.getElementById('modal_container');
-const closebtn2 = document.getElementById('closebtn');
+const modal_container2 = document.getElementById('modal_container2');
+const closebtn2 = document.getElementById('closebtn2');
 
 singupbtn.addEventListener('click', () =>{
     modal_container2.classList.add('show');
