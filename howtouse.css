@@ -29,7 +29,7 @@ nav{
 .clublogo{
     position: relative;
     bottom:-60px;
-    left: -100px;
+    left: -88px;
 }
 
 .clubtext{
@@ -48,7 +48,10 @@ font-family: 'Noto Sans KR', sans-serif;
 .nav-links{
     display: flex;
     justify-content: space-around;
-    width: 50%;
+    width: 45%;
+    position: relative;
+    left: 45px;
+    top: 13px;
 }
 
 .nav-links li{
@@ -60,7 +63,7 @@ font-family: 'Noto Sans KR', sans-serif;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     color: black;
 }
 
@@ -93,4 +96,16 @@ font-family: 'Noto Sans KR', sans-serif;
 .text-box h1{
     position: relative;
     font-size: 35px;
+}
+
+hr {
+    position: relative;
+    top: -65px;
+}
+
+h4 {
+    position: relative;
+    top: 39px;
+    font-size: 20px;
+    left: -35px;
 }
