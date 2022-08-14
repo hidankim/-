@@ -4,6 +4,10 @@ body{
     font-family: sans-serif;
     box-sizing: border-box;
     height: 100vh;
+    background: url(pictures/002.png);
+    background-size: 85%;
+    background-position-x: 80px;
+
 }
 
 .header{
@@ -167,9 +171,9 @@ font-family: 'Noto Sans KR', sans-serif;
 .modal{
     background-color: #fff;
     max-width: 300%;
-    width: 500px;
+    width: 300px;
     max-width: 100%;
-    height: 200px;
+    height: 130px;
     padding: 30px 50px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -250,9 +254,9 @@ input{
 .modal2{
     background-color: #fff;
     max-width: 300%;
-    width: 500px;
+    width: 300px;
     max-width: 100%;
-    height: 300px;
+    height: 500px;
     padding: 30px 50px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -290,6 +294,12 @@ h4 {
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
+}
+
+.button {
+    position: relative;
+    top: -31.5px;
+    left: 100px;
 }
 
 
