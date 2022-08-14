@@ -85,7 +85,7 @@ font-family: 'Noto Sans KR', sans-serif;
 .intrologo{
     position: absolute;
     left: 400px;
-    top: 100px;
+    top: 25px;
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Noto Sans KR', sans-serif;
     
@@ -94,7 +94,7 @@ font-family: 'Noto Sans KR', sans-serif;
 .withcslogo{
     position: relative;
     left: 400px;
-    top: 500px;
+    top: 100px;
 }
 
 .intrologo .logokor{

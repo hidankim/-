@@ -298,8 +298,15 @@ h4 {
 
 .button {
     position: relative;
-    top: -31.5px;
+    top: -23px;
     left: 100px;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 5px;
+    background-color: #7476c0;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
 }
 
 
