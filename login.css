@@ -4,9 +4,12 @@ body{
     font-family: sans-serif;
     box-sizing: border-box;
     height: 100vh;
-    background: url(pictures/002.png);
-    background-size: 85%;
-    background-position-x: 80px;
+    background: url(pictures/background_main.png);
+    background-position-x: 130px;
+    background-position-y: 30px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+
 
 }
 
@@ -144,7 +147,8 @@ font-family: 'Noto Sans KR', sans-serif;
 }
 
 .login-btn:hover{
-    background: #b3b4d2;
+    background: #7477c06f;
+    cursor: pointer;
 }
 
 
@@ -210,7 +214,8 @@ font-family: 'Noto Sans KR', sans-serif;
 }
 
 .signup-btn:hover{
-    background: #b3b4d2;
+    background: #7477c06f;
+    cursor: pointer;
 }
 
 input{
@@ -278,6 +283,12 @@ input{
     right: 0px;
 }
 
+.poplogo {
+    position: relative;
+    size: 50%;
+}
+
+
 hr {
     position: relative;
     top: -65px;
@@ -307,6 +318,11 @@ h4 {
     border-radius: 30px;
     color: #fff;
     text-decoration: none;
+}
+
+.backimg {
+    position: absolute;
+    left: 50%;
 }
 
 

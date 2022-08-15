@@ -141,6 +141,13 @@ font-family: 'Noto Sans KR', sans-serif;
     width: 80px;
 }
 
+.withcslogo2{
+    position: relative;
+    top: -570px;
+    width: 30px;
+    left: 700px;
+}
+
 hr {
     position: relative;
     top: -65px;
