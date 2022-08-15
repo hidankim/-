@@ -4,9 +4,12 @@ body{
     font-family: sans-serif;
     box-sizing: border-box;
     height: 100vh;
-    background: url(pictures/002.png);
-    background-size: 85%;
-    background-position-x: 80px;
+    background: url(pictures/background_main.png);
+    background-position-x: 130px;
+    background-position-y: 30px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+
 
 }
 
@@ -283,6 +286,10 @@ input{
     size: 50%;
 }
 
+.poplogo2 {
+    position: relative;
+}
+
 hr {
     position: relative;
     top: -65px;
@@ -305,6 +312,11 @@ h4 {
     position: relative;
     top: -31.5px;
     left: 100px;
+}
+
+.backimg {
+    position: absolute;
+    left: 50%;
 }
 
 
