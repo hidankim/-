@@ -278,6 +278,11 @@ input{
     right: 0px;
 }
 
+.poplogo {
+    position: relative;
+    size: 50%;
+}
+
 hr {
     position: relative;
     top: -65px;
