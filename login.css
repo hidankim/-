@@ -147,7 +147,8 @@ font-family: 'Noto Sans KR', sans-serif;
 }
 
 .login-btn:hover{
-    background: #b3b4d2;
+    background: #7477c06f;
+    cursor: pointer;
 }
 
 
@@ -213,7 +214,8 @@ font-family: 'Noto Sans KR', sans-serif;
 }
 
 .signup-btn:hover{
-    background: #b3b4d2;
+    background: #7477c06f;
+    cursor: pointer;
 }
 
 input{
@@ -286,9 +288,6 @@ input{
     size: 50%;
 }
 
-.poplogo2 {
-    position: relative;
-}
 
 hr {
     position: relative;
