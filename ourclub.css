@@ -126,12 +126,11 @@ font-family: 'Noto Sans KR', sans-serif;
     padding: 1px;
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 13px;
 }
 
 .text-box .subtitle{
     border-style: solid;
-    width: 10%; 
+    width: 10%;
     text-align: center;
 }
 

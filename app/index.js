@@ -10,7 +10,6 @@ var pageFirst = first;
 var pageYear;
 var mainTodayDay = document.getElementById('main-day');
 var mainTodayDate = document.getElementById('main-date');
-var mainNowweek = document.getElementById('main-week_HB');
 if(first.getFullYear() % 4 === 0){
     pageYear = leapYear;
 }else{
@@ -22,15 +21,15 @@ function showCalendar(){
     let cnt = 1;
     for(var i = 0; i < 6; i++){
         var $tr = document.createElement('tr');
-        $tr.setAttribute('id', monthCnt);
+        $tr.setAttribute('id', monthCnt);   
         for(var j = 0; j < 7; j++){
             if((i === 0 && j < first.getDay()) || cnt > pageYear[first.getMonth()]){
                 var $td = document.createElement('td');
-                $tr.appendChild($td);
+                $tr.appendChild($td);     
             }else{
                 var $td = document.createElement('td');
                 $td.textContent = cnt;
-                $td.setAttribute('id', cnt);
+                $td.setAttribute('id', cnt);                
                 $tr.appendChild($td);
                 cnt++;
             }
@@ -108,26 +107,19 @@ function next(){
     today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
     currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;'+ first.getFullYear();
     removeCalendar();
-    showCalendar();
+    showCalendar(); 
     showMain();
     clickedDate1 = document.getElementById(today.getDate());
-    clickedDate1.classList.add('active');
+    clickedDate1.classList.add('active');  
     clickStart();
     reshowingList();
 }
 
 currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;' + first.getFullYear();
-
-    function showMain(){
-        // HB_currentdate = new Date();
-        // var HB_oneJan = new Date(HB_currentdate.getFullYear(),0,1);
-        // var HB_numberOfDays = Math.floor((HB_currentdate - HB_oneJan) / (24 * 60 * 60 * 1000));
-        // var HB_result = Math.ceil(( HB_currentdate.getDay() + 1 + HB_numberOfDays) / 7);
+function showMain(){
     mainTodayDay.innerHTML = dayList[today.getDay()];
     mainTodayDate.innerHTML = today.getDate();
-    var SH_weeknum = (Math.floor(((today.getDate() - (7 - first.getDay()))/7) - 0.1) + 2);
-    mainNowweek.innerHTML = "Week " + SH_weeknum;
-    }
+}
 showMain();
 
 var clickedDate1 = document.getElementById(today.getDate());
@@ -194,7 +186,7 @@ function reshowingList(){
             var $div = document.createElement('div');
             $div.textContent = '-' + todoList[keyValue][i];
             var $btn = document.createElement('button');
-            $btn.setAttribute('type', 'button');
+            $btn.setAttribute('type', 'button'); 
             $btn.setAttribute('id', 'del-ata');
             $btn.setAttribute('id', dataCnt+keyValue);
             $btn.setAttribute('class', 'del-data');
@@ -225,7 +217,7 @@ function addTodoList(){
     var $div = document.createElement('div');
     $div.textContent = '-' + inputBox.value;
     var $btn = document.createElement('button');
-    $btn.setAttribute('type', 'button');
+    $btn.setAttribute('type', 'button'); 
     $btn.setAttribute('id', 'del-ata');
     $btn.setAttribute('id', dataCnt+keyValue);
     $btn.setAttribute('class', "del-data");
@@ -244,6 +236,5 @@ function addTodoList(){
 }
 console.log(keyValue);
 function checkList(e){
-    var win = window.open("https://google.com/", "", "_blank");
-    // e.currentTarget.classList.add('checked');
+    e.currentTarget.classList.add('checked');
 }
