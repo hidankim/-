@@ -1,0 +1,92 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    height: 100vh;
+    background: url(pictures/background_main.png);
+    background-position-x: 130px;
+    background-position-y: 30px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+
+
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    color: white; 
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    position: relative;
+    top:-40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 1vh;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+.clublogo{
+    position: relative;
+    bottom:-60px;
+    left: -88px;
+}
+
+.clubtext{
+    position: relative;
+    top:-50px;
+}
+
+.logo{
+    letter-spacing: 5px;
+    font-size: 25px;
+    color: black;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    position: relative;
+    left: 45px;
+    top: 13px;
+}
+
+.nav-links li{
+    list-style: none;
+    color: black;
+}
+
+.nav-links a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.nav-links a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+}
