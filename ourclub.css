@@ -85,7 +85,7 @@ font-family: 'Noto Sans KR', sans-serif;
 .intrologo{
     position: absolute;
     left: 400px;
-    top: 25px;
+    top: 100px;
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Noto Sans KR', sans-serif;
     
@@ -93,28 +93,27 @@ font-family: 'Noto Sans KR', sans-serif;
 
 .withcslogo{
     position: relative;
-    left: 400px;
-    top: 100px;
+    top: 500px;
 }
 
 .intrologo .logokor{
     position: relative;
-    left: 30px;
-    top: 120px;
+    left: 0px;
+    top: 20px;
     font-size: 45px;
 }
 
 .intrologo .logoeng{
     position: relative;
-    left: 30px;
-    top: 100px;
+    left: 0px;
+    top: 0px;
     font-size: 20px;
 }
  
 .intrologo .logoicon{
     position: relative; 
-    right: -195px; 
-    top: -30px; 
+    right: -175px; 
+    top: -130px; 
 }
 
 
@@ -126,26 +125,19 @@ font-family: 'Noto Sans KR', sans-serif;
     padding: 1px;
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
 }
-
 
 .text-box .subtitle{
     border-style: solid;
-    width: 10%;
+    width: 10%; 
     text-align: center;
 }
 
 .withcslogo{
     position: relative;
-    top: -500px;
+    top: -840px;
     width: 80px;
-}
-
-.withcslogo2{
-    position: relative;
-    top: -570px;
-    width: 30px;
-    left: 700px;
 }
 
 hr {
@@ -159,5 +151,4 @@ h4 {
     font-size: 20px;
     left: -35px;
 }
-
 
