@@ -84,7 +84,7 @@ font-family: 'Noto Sans KR', sans-serif;
 .text-box{
     position: absolute;
     left: 50%;
-    top: 75%;
+    top: 70%;
     transform: translate(-50%, -50%);
     padding: 1px;
     padding-bottom: 50px;
@@ -109,6 +109,4 @@ h4 {
     top: 39px;
     font-size: 20px;
     left: -35px;
-=======
->>>>>>> parent of c43b673 (Merge branch 'main' of https://github.com/hidankim/With_economy)
 }
