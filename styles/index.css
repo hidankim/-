@@ -265,3 +265,11 @@ html, body{
     border-color: #7476c0;
   }
 }
+
+.prev_{
+  cursor: pointer;
+}
+
+.next_{
+  cursor: pointer;
+}
