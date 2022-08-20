@@ -238,3 +238,7 @@ console.log(keyValue);
 function checkList(e){
     e.currentTarget.classList.add('checked');
 }
+
+function addUnderDate(){
+    var $div = document.createElement('div');
+}
