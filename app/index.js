@@ -33,6 +33,7 @@ function showCalendar(){
                 $td.textContent = cnt;
                 $td.setAttribute('id', cnt);
                 $tr.appendChild($td);
+              
                 cnt++;
             }
         }
@@ -234,12 +235,22 @@ function addTodoList(){
     $div.addEventListener('click',checkList);
     $btn.addEventListener('click',deleteTodo);
     //append to list
-    $
+    
     function deleteTodo(){
         $div.remove();
         $btn.remove();
     }
 }
+
+
+//function writeUnderDate(){
+//    let info = document.getElementById('input-box2').value;
+//    var now = mainTodayDate;
+//    $d = document.createElement('div');
+//   document.getElementById('now').appendChild()
+//}
+
+
 console.log(keyValue);
 function checkList(e){
     e.currentTarget.classList.add('checked');
