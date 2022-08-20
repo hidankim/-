@@ -10,6 +10,7 @@ var pageFirst = first;
 var pageYear;
 var mainTodayDay = document.getElementById('main-day');
 var mainTodayDate = document.getElementById('main-date');
+var mainNowweek = document.getElementById('main-week')
 
 if(first.getFullYear() % 4 === 0){
     pageYear = leapYear;
@@ -22,15 +23,15 @@ function showCalendar(){
     let cnt = 1;
     for(var i = 0; i < 6; i++){
         var $tr = document.createElement('tr');
-        $tr.setAttribute('id', monthCnt);   
+        $tr.setAttribute('id', monthCnt);
         for(var j = 0; j < 7; j++){
             if((i === 0 && j < first.getDay()) || cnt > pageYear[first.getMonth()]){
                 var $td = document.createElement('td');
-                $tr.appendChild($td);     
+                $tr.appendChild($td);
             }else{
                 var $td = document.createElement('td');
                 $td.textContent = cnt;
-                $td.setAttribute('id', cnt);                
+                $td.setAttribute('id', cnt);
                 $tr.appendChild($td);
                 cnt++;
             }
@@ -76,7 +77,7 @@ function prev(){
     currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;'+ first.getFullYear();
     removeCalendar();
     showCalendar();
-    
+
     showMain();
     clickedDate1 = document.getElementById(today.getDate());
     clickedDate1.classList.add('active');
@@ -109,21 +110,19 @@ function next(){
     today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
     currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;'+ first.getFullYear();
     removeCalendar();
-    showCalendar(); 
+    showCalendar();
     showMain();
     clickedDate1 = document.getElementById(today.getDate());
-    clickedDate1.classList.add('active');  
+    clickedDate1.classList.add('active');
     clickStart();
     reshowingList();
 }
 
 currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;' + first.getFullYear();
 function showMain(){
-    today = new Date(today.getFullYear(), today.getMonth(), clickedDate1.id);
     mainTodayDay.innerHTML = dayList[today.getDay()];
     mainTodayDate.innerHTML = today.getDate();
-    today_firstofm = new Date(today.getFullYear(), today.getMonth()-1, 1);
-    mainNowweek.innerHTML = "Week " + Math.floor((today.getDate() - (6 - today_firstofm.getDay()))/7 + 1);
+    mainNowweek.innerHTML = "Week " + (Math.floor(((today.getDate() - (7 - first.getDay()))/7) - 0.1) + 2);
 }
 showMain();
 
@@ -191,7 +190,7 @@ function reshowingList(){
             var $div = document.createElement('div');
             $div.textContent = '-' + todoList[keyValue][i];
             var $btn = document.createElement('button');
-            $btn.setAttribute('type', 'button'); 
+            $btn.setAttribute('type', 'button');
             $btn.setAttribute('id', 'del-ata');
             $btn.setAttribute('id', dataCnt+keyValue);
             $btn.setAttribute('class', 'del-data');
@@ -222,7 +221,7 @@ function addTodoList(){
     var $div = document.createElement('div');
     $div.textContent = '-' + inputBox.value;
     var $btn = document.createElement('button');
-    $btn.setAttribute('type', 'button'); 
+    $btn.setAttribute('type', 'button');
     $btn.setAttribute('id', 'del-ata');
     $btn.setAttribute('id', dataCnt+keyValue);
     $btn.setAttribute('class', "del-data");
@@ -245,4 +244,3 @@ console.log(keyValue);
 function checkList(e){
     e.currentTarget.classList.add('checked');
 }
-
