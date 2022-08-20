@@ -10,6 +10,7 @@ var pageFirst = first;
 var pageYear;
 var mainTodayDay = document.getElementById('main-day');
 var mainTodayDate = document.getElementById('main-date');
+
 if(first.getFullYear() % 4 === 0){
     pageYear = leapYear;
 }else{
@@ -75,6 +76,7 @@ function prev(){
     currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;'+ first.getFullYear();
     removeCalendar();
     showCalendar();
+    
     showMain();
     clickedDate1 = document.getElementById(today.getDate());
     clickedDate1.classList.add('active');
@@ -117,8 +119,11 @@ function next(){
 
 currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;' + first.getFullYear();
 function showMain(){
+    today = new Date(today.getFullYear(), today.getMonth(), clickedDate1.id);
     mainTodayDay.innerHTML = dayList[today.getDay()];
     mainTodayDate.innerHTML = today.getDate();
+    today_firstofm = new Date(today.getFullYear(), today.getMonth()-1, 1);
+    mainNowweek.innerHTML = "Week " + Math.floor((today.getDate() - (6 - today_firstofm.getDay()))/7 + 1);
 }
 showMain();
 
@@ -229,6 +234,8 @@ function addTodoList(){
     inputBox.value = '';
     $div.addEventListener('click',checkList);
     $btn.addEventListener('click',deleteTodo);
+    //append to list
+    $
     function deleteTodo(){
         $div.remove();
         $btn.remove();
@@ -239,6 +246,3 @@ function checkList(e){
     e.currentTarget.classList.add('checked');
 }
 
-function addUnderDate(){
-    var $div = document.createElement('div');
-}
