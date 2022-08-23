@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input.css">
+    <title>Input</title>
+</head>
+<body>
+    <div class="main">
+      
+      <div class="home-button">
+        <a href="login.html">
+          <img src="./pictures/home button 7476c0.png">
+        </a>
+      </div>
+
+        <div class="content-wrap">
+          <div class="content-right">
+          </div>
+        </div>
+
+
+        <div class="content-left">
+          <div class="todo-wrap">
+              <form action="input.php" method="post">
+                <div class="container">
+                      <h1>Add Task</h1>
+
+                      <div>
+                      <label for="subject"><b>과목</b></label>
+                      <input type="text" name="subject" required>
+                      </div>
+
+                      <div>
+                      <label for="date"><b>날짜</b></label>
+                      <input type="date" name="date" required>
+                      </div>
+
+                      <div>
+                      <label for="period"><b>교시</b></label>
+                      <input type="text" name="period" required>
+                      </div>
+
+                      <div>
+                      <label for="name"><b>제목</b></label>
+                      <input type="text" name="name" required>
+                      </div>
+
+                      <div>
+                      <label for="info"><b>정보</b></label>
+                      <input type="text" name="info" required>
+                      </div>
+
+                      <div>
+                      <input type="submit" name="create" value="확인">
+                      </div>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
