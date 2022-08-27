@@ -139,19 +139,16 @@ nav{
 .container {
     margin-top: 100px;
     padding: 32px;
-    position: relative;
-    top: -50%;
   }
   
   .select-box {
+    position: absolute;
+    top: 600px;
+    left: 150px;
     display: flex;
     width: 200px;
     flex-direction: column;
     text-align: center;
-    font-weight: bolder;
-    font-size: 20px;
-    border-radius: 50px;
-
   }
   
   .select-box .options-container {
@@ -231,6 +228,11 @@ nav{
   .select-box .option .radio {
     display: none;
   }
+
+
+
+  
+
 
 
   /* unvisited link */
