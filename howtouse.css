@@ -4,6 +4,8 @@ body{
     font-family: sans-serif;
     box-sizing: border-box;
     height: 100vh;
+    background: url(pictures/background.png);
+    background-repeat: no-repeat; 
 }
 
 .header{
@@ -28,13 +30,14 @@ nav{
 
 .clublogo{
     position: relative;
-    bottom:-60px;
-    left: -88px;
+    bottom:-75px;
+    left: -100px;
 }
 
 .clubtext{
     position: relative;
-    top:-50px;
+    top:-60px;
+    left: 30px;
 }
 
 .logo{
@@ -48,10 +51,10 @@ font-family: 'Noto Sans KR', sans-serif;
 .nav-links{
     display: flex;
     justify-content: space-around;
-    width: 45%;
+    width: 50%;
     position: relative;
-    left: 45px;
-    top: 13px;
+    left: 100px;
+    top: 35px;
 }
 
 .nav-links li{
@@ -83,8 +86,8 @@ font-family: 'Noto Sans KR', sans-serif;
 
 .text-box{
     position: absolute;
-    left: 50%;
-    top: 70%;
+    left: 25%;
+    top: 36%;
     transform: translate(-50%, -50%);
     padding: 1px;
     padding-bottom: 50px;
@@ -99,14 +102,28 @@ font-family: 'Noto Sans KR', sans-serif;
     font-size: 35px;
 }
 
-hr {
+.text-box2 h1{
     position: relative;
-    top: -65px;
+    font-size: 35px;
+    width: 150%;
 }
 
 h4 {
     position: relative;
-    top: 39px;
+    top: 60px;
     font-size: 20px;
-    left: -35px;
+    left: -75px;
+}
+
+.text-box2{
+    position: absolute;
+    left: 26.2%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    padding: 1px;
+    padding-bottom: 50px;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px; 
+
 }
