@@ -5,9 +5,8 @@ body{
     box-sizing: border-box;
     height: 100vh;
     background: url(pictures/KakaoTalk_20220828_025730586.png);
+    background-size: 94%;
     background-repeat: no-repeat; 
-
-
 }
 
 @font-face {
@@ -140,6 +139,8 @@ nav{
 .container {
     margin-top: 100px;
     padding: 32px;
+    position: relative;
+    top: -50%;
   }
   
   .select-box {
