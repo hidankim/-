@@ -4,11 +4,8 @@ body{
     font-family: sans-serif;
     box-sizing: border-box;
     height: 100vh;
-    /* background: url(pictures/background_main.png);
-    background-position-x: 130px;
-    background-position-y: 30px;
-    background-size: 90%;
-    background-repeat: no-repeat; */
+    background: url(pictures/background.png);
+    background-repeat: no-repeat; 
 
 
 }
@@ -51,14 +48,14 @@ nav{
 
 .clublogo{
     position: relative;
-    bottom:-92px;
-    left: -178px;
+    bottom:-75px;
+    left: -100px;
 }
 
 .clubtext{
     position: relative;
-    top:-18px;
-    left: -90px;
+    top:-60px;
+    left: 30px;
 }
 
 .logo{
@@ -74,10 +71,10 @@ nav{
 .nav-links{
     display: flex;
     justify-content: space-around;
-    width: 33%;
+    width: 50%;
     position: relative;
-    left: -250px;
-    top: 45px;
+    left: 100px;
+    top: 35px;
 }
 
 .nav-links li{
@@ -110,8 +107,8 @@ nav{
 
 .text-box{
     position: absolute;
-    left: 5%;
-    top: 15%;
+    left: 10%;
+    top: 5%;
     width: 600px;
     padding: 0px;
     font-family: 둥근고딕B;
@@ -119,13 +116,15 @@ nav{
 }
 
 .text-box h1{
-    font-size: 85px;
+    font-size: 130px;
     margin-bottom: 0px;
 }
 
 .text-box h2{
     margin: 0px 0 20px;
     font-size: 30px;
+    position: relative;
+    left: 5%;
 }
 
 .text-box2{
@@ -309,8 +308,8 @@ input{
 
 h4 {
     position: relative;
-    top: 65px;
-    font-size: 30px;
+    top: 60px;
+    font-size: 20px;
     left: -75px;
 }
 
@@ -337,6 +336,13 @@ h4 {
     position: absolute;
     left: 50%;
 }
+
+.main img{
+    position: relative;
+    left: 700px;
+    top: -850px;
+}
+
 
 
 
