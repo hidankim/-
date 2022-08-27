@@ -4,7 +4,7 @@ body{
     font-family: sans-serif;
     box-sizing: border-box;
     height: 100vh;
-    background: url(pictures/KakaoTalk_20220828_025730586.png);
+    background: url(pictures/KakaoTalk_20220828_025730586.png) fixed;
     background-size: 94%;
     background-repeat: no-repeat; 
 }
@@ -30,7 +30,7 @@ body{
     color: white; 
     background-position: center;
     background-size: cover;
-    position: relative;
+    position: fixed;
 }
 
 nav{
@@ -139,11 +139,12 @@ nav{
 .container {
     margin-top: 100px;
     padding: 32px;
+    position: fixed;
   }
   
   .select-box {
     position: absolute;
-    top: 600px;
+    top: 500px;
     left: 150px;
     display: flex;
     width: 200px;
