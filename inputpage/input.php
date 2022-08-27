@@ -9,7 +9,7 @@
 <body>
 
     <div>
-        <form action="registration.php" method="post">
+        <form action="mysql_input.php" method="post">
             <div class="container">
                 <h1>Registration</h1>
                 <p>Fill up the form with correct values.</p>
