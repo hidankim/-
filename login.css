@@ -152,7 +152,7 @@ nav{
   }
   
   .select-box2 .options-container2 {
-    background: #2f3640;
+    background: black;
     color: #f5f6fa;
     max-height: 0;
     width: 100%;
@@ -165,7 +165,7 @@ nav{
   }
   
   .selected2 {
-    background: #2f3640;
+    background: black;
     border-radius: 8px;
     margin-bottom: 8px;
     color: #f5f6fa;
@@ -204,12 +204,12 @@ nav{
   
   .select-box2 .options-container2::-webkit-scrollbar {
     width: 8px;
-    background: #0d141f;
+    background: black;
     border-radius: 0 8px 8px 0;
   }
   
   .select-box2 .options-container2::-webkit-scrollbar-thumb {
-    background: #525861;
+    background: black;
     border-radius: 0 8px 8px 0;
   }
   
@@ -220,7 +220,7 @@ nav{
   }
   
   .select-box2 .option2:hover {
-    background: #414b57;
+    background: black;
   }
   
   .select-box2 label {
@@ -250,7 +250,7 @@ nav{
   }
   
   .select-box .options-container {
-    background: #2f3640;
+    background: black;
     color: #f5f6fa;
     max-height: 0;
     width: 100%;
@@ -263,7 +263,7 @@ nav{
   }
   
   .selected {
-    background: #2f3640;
+    background: black;
     border-radius: 8px;
     margin-bottom: 8px;
     color: #f5f6fa;
@@ -301,12 +301,12 @@ nav{
   
   .select-box .options-container::-webkit-scrollbar {
     width: 8px;
-    background: #0d141f;
+    background: black;
     border-radius: 0 8px 8px 0;
   }
   
   .select-box .options-container::-webkit-scrollbar-thumb {
-    background: #525861;
+    background: black;
     border-radius: 0 8px 8px 0;
   }
   
@@ -317,7 +317,7 @@ nav{
   }
   
   .select-box .option:hover {
-    background: #414b57;
+    background: black;
   }
   
   .select-box label {
