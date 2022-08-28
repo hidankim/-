@@ -4,7 +4,7 @@ body{
     font-family: sans-serif;
     box-sizing: border-box;
     height: 100vh;
-    background: url(pictures/KakaoTalk_20220828_025730586.png) fixed;
+    background: url(pictures/KakaoTalk_20220828_025730586.png);
     background-size: 100%;
     background-repeat: no-repeat; 
 }
@@ -140,6 +140,7 @@ nav{
     margin-top: 100px;
     padding: 32px;
     position: fixed;
+
   }
   
   .select-box2 {
@@ -147,7 +148,7 @@ nav{
     top: 500px;
     left: 500px;
     display: flex;
-    width: 200px;
+    width: 250px;
     flex-direction: column;
     text-align: center;
   }
@@ -171,6 +172,7 @@ nav{
     margin-bottom: 8px;
     color: #f5f6fa;
     position: relative;
+    border-radius: 25px;
   
     order: 0;
   }
@@ -194,6 +196,7 @@ nav{
     max-height: 240px;
     opacity: 1;
     overflow-y: scroll;
+    border-radius: 25px;
   }
   
   .select-box2 .options-container2.active + .selected2::after {
@@ -267,6 +270,7 @@ nav{
     margin-bottom: 8px;
     color: #f5f6fa;
     position: relative;
+    border-radius: 25px;
   
     order: 0;
   }
