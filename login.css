@@ -136,7 +136,103 @@ nav{
 
 
 
-.container {
+.highschool {
+    margin-top: 100px;
+    padding: 32px;
+    position: fixed;
+  }
+  
+  .select-box2 {
+    position: absolute;
+    top: 500px;
+    left: 500px;
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .select-box2 .options-container2 {
+    background: #2f3640;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+  
+    order: 1;
+  }
+  
+  .selected2 {
+    background: #2f3640;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #f5f6fa;
+    position: relative;
+  
+    order: 0;
+  }
+  
+  .selected2::after {
+    content: "";
+    background: url("img/arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 5px;
+  
+    transition: all 0.4s;
+  }
+  
+  .select-box2 .options-container2.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+  }
+  
+  .select-box2 .options-container2.active + .selected2::after {
+    transform: rotateX(180deg);
+    top: -6px;
+  }
+  
+  .select-box2 .options-container2::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .select-box2 .options-container2::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .select-box2 .option2,
+  .selected2 {
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+  
+  .select-box2 .option2:hover {
+    background: #414b57;
+  }
+  
+  .select-box2 label {
+    cursor: pointer;
+  }
+  
+  .select-box2 .option2 .radio {
+    display: none;
+  }
+
+
+
+  .middleschool {
     margin-top: 100px;
     padding: 32px;
     position: fixed;
@@ -145,7 +241,7 @@ nav{
   .select-box {
     position: absolute;
     top: 500px;
-    left: 150px;
+    left: 250px;
     display: flex;
     width: 200px;
     flex-direction: column;
@@ -231,44 +327,43 @@ nav{
   }
 
 
-
   
 
 
 
   /* unvisited link */
- .google:link {
+ .classLink:link {
     color: #fff;
   }
   
   /* visited link */
-  .google:visited {
+  .classLink:visited {
     color: #fff;
   }
   
   /* mouse over link */
-  .google:hover {
+  .classLink:hover {
     color: #fff;
   }
   
   /* selected link */
-  .google:active {
+  .classLink:active {
     color: #fff;
   }
 
-  .google:link {
+  .classLink:link {
     text-decoration: none;
   }
   
-  .google:visited {
+  .classLink:visited {
     text-decoration: none;
   }
   
-  .google:hover {
+  .classLink:hover {
     text-decoration: none;
   }
   
-  .google:active {
+  .classLink:active {
     text-decoration: none;
   }
 
