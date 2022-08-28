@@ -1,7 +1,24 @@
 <?php
-  $data = $_POST["DB_data"];
+   $server = "localhost";
+   $user = "root";
+   $port = "3306";
+   $password = "rBXAm7WN";
+   $database = "witheconomy_calendar";
+   $datetime = "2022-08-27";
 
-  print_r($data);
+   $con = mysqli_connect($server, $user, $password, $database, $port);
+
+   $sql = "SELECT * FROM middle_1_1 WHERE datetime=\"".$datetime."\""; 
+
+   $result = mysqli_query($con, $sql);
+
+   $row = array();
+   while($subrow = mysqli_fetch_row($result))
+   {
+      array_push($row, $subrow);
+   }
+
+   mysql_close($con);
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +28,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="input.css">
-    <title>Input</title>
+    <title>Input04</title>
 </head>
 <body>
     <div class="main">
@@ -77,7 +94,9 @@
           </div>
         </div>
       </div>
-
-      <button type="button" onclick="location.href='mysql_output.php'">값 얻기</button>
+      <script type="text/javascript">
+        var js_array = <?php echo json_encode($row)?>;
+        console.log(js_array);
+      </script>
 </body>
 </html>
