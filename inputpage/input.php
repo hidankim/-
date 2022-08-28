@@ -1,3 +1,9 @@
+<?php
+  $data = $_POST["DB_data"];
+
+  print_r($data);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,23 +24,6 @@
 
         <div class="content-wrap">
           <div class="content-right">
-            <table>
-              <tr>
-                <th>과목</th>
-                <th>날짜</th>
-                <th>교시</th>
-                <th>과목</th>
-                <th>정보</th>
-              </tr>
-
-            <?php
-            $conn = mysql_connect("locahost", "root", "", "witheconomy_calendar");
-            if ($conn -> connect_error) {
-                die("Connection failed:". $conn=> connect_error);
-            }
-            ?>
-
-            </table>
           </div>
         </div>
 

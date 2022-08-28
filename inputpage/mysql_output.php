@@ -21,6 +21,23 @@
    echo "test";
 ?>
 
-<script type="text/javascript">
-   var js_array = <?php echo json_encode($row)?>;
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title></title>
+</head>
+<body>
+   <form action="mysql_output.php" method="post">
+      <button class='buttons' id='submitBtn' type="submit" onclick="submitScore()">SUBMIT</button>
+      <input type="hidden" id="DB_data" name="DB_data" value="">
+   </form>
+   <script type="text/javascript">
+      var js_array = <?php echo json_encode($row)?>;
+      function submitScore(){
+         document.getElementById('username').value = username;
+      }
+   </script>
+</body>
+</html>
