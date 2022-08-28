@@ -8,6 +8,11 @@ body{
     background-repeat: no-repeat; 
 }
 
+@font-face {
+    font-family: parisNineteenSeventy;
+    src: url(fonts/Chalet-ParisNineteenSeventy_10022.ttf);
+}
+
 .header{
     min-height: 100vh;
     width: 100%;
@@ -24,8 +29,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 1vh;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: parisNineteenSeventy;
 
 }
 
@@ -37,7 +41,7 @@ nav{
 
 .clubtext{
     position: relative;
-    top:-60px;
+    top:-42px;
     left: 30px;
 }
 
@@ -45,8 +49,7 @@ nav{
     letter-spacing: 5px;
     font-size: 25px;
     color: black;
-    font-family: 'Noto Sans', sans-serif;
-font-family: 'Noto Sans KR', sans-serif;
+    font-family: parisNineteenSeventy;
 }
 
 .nav-links{
@@ -89,8 +92,7 @@ font-family: 'Noto Sans KR', sans-serif;
     position: absolute;
     left: 400px;
     top: 100px;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: parisNineteenSeventy;
     
 }
 
@@ -127,8 +129,7 @@ font-family: 'Noto Sans KR', sans-serif;
     top: 60%;
     transform: translate(-50%, -50%);
     padding: 1px;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: parisNineteenSeventy;
     font-size: 13px;
 }
 
@@ -139,8 +140,7 @@ font-family: 'Noto Sans KR', sans-serif;
     top: 55%;
     transform: translate(-50%, -50%);
     padding: 1px;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: parisNineteenSeventy;
     font-size: 13px;
 }
 
