@@ -8,7 +8,7 @@
 
    $con = mysqli_connect($server, $user, $password, $database, $port);
 
-   $sql = "SELECT * FROM middle_1_1 WHERE datetime=\"".$datetime."\"";
+   $sql = "SELECT * FROM middle_1_1 WHERE datetime=\"".$datetime."\""; 
 
    $result = mysqli_query($con, $sql);
 

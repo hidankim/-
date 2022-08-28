@@ -57,6 +57,7 @@ html, body{
 }
 .todo-wrap{
   padding: 0 0 0 40px;
+  border: 4px solid rgba(0, 0, 0, 0.5);
 }
 .todo-title{
   font-size: 20px;
