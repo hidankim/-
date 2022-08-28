@@ -150,6 +150,7 @@ nav{
     flex-direction: column;
     text-align: center;
     font-size: 25px;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
   }
   
   .select-box2 .options-container2 {
@@ -173,6 +174,8 @@ nav{
     position: relative;
     border-radius: 40px;
   
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 150%;
     order: 0;
   }
   
@@ -249,6 +252,7 @@ nav{
     flex-direction: column;
     text-align: center;
     font-size: 25px;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
   }
   
   .select-box .options-container {
@@ -271,7 +275,8 @@ nav{
     color: #f5f6fa;
     position: relative;
     border-radius: 40px;
-  
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 150%;
     order: 0;
   }
   
