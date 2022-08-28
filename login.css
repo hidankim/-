@@ -143,12 +143,13 @@ nav{
   
   .select-box2 {
     position: absolute;
-    top: 500px;
-    left: 500px;
+    top: 370px;
+    left: 490px;
     display: flex;
-    width: 250px;
+    width: 300px;
     flex-direction: column;
     text-align: center;
+    font-size: 25px;
   }
   
   .select-box2 .options-container2 {
@@ -241,12 +242,13 @@ nav{
   
   .select-box {
     position: absolute;
-    top: 500px;
-    left: 250px;
+    top: 370px;
+    left: 140px;
     display: flex;
-    width: 200px;
+    width: 300px;
     flex-direction: column;
     text-align: center;
+    font-size: 25px;
   }
   
   .select-box .options-container {
@@ -268,7 +270,7 @@ nav{
     margin-bottom: 8px;
     color: #f5f6fa;
     position: relative;
-    border-radius: 25px;
+    border-radius: 40px;
   
     order: 0;
   }
@@ -292,6 +294,7 @@ nav{
     max-height: 240px;
     opacity: 1;
     overflow-y: scroll;
+    border-radius: 25px;
   }
   
   .select-box .options-container.active + .selected::after {
