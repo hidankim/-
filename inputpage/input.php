@@ -8,7 +8,7 @@
 
    $con = mysqli_connect($server, $user, $password, $database, $port);
 
-   $sql = "SELECT * FROM middle_1_1 WHERE datetime=\"".$datetime."\""; 
+   $sql = "SELECT * FROM schedules WHERE datetime=\"".$datetime."\""; 
 
    $result = mysqli_query($con, $sql);
 
@@ -84,6 +84,36 @@
                       <div>
                       <label for="info"><b>정보</b></label>
                       <input type="text" name="info" required>
+                      </div>
+
+                      <div>
+                      <label for="classname"><b>반</b></label>
+                      <select name="classname" required>
+                        <option value="middle_1_1">011</option>
+                        <option value="middle_1_2">012</option>
+                        <option value="middle_1_3">013</option>
+                        <option value="middle_1_4">014</option>
+                        <option value="middle_2_1">021</option>
+                        <option value="middle_2_2">022</option>
+                        <option value="middle_2_3">023</option>
+                        <option value="middle_2_4">024</option>
+                        <option value="middle_3_1">031</option>
+                        <option value="middle_3_2">032</option>
+                        <option value="middle_3_3">033</option>
+                        <option value="middle_3_4">034</option>
+                        <option value="high_1_1">111</option>
+                        <option value="high_1_2">112</option>
+                        <option value="high_1_3">113</option>
+                        <option value="high_1_4">114</option>
+                        <option value="high_2_1">121</option>
+                        <option value="high_2_2">122</option>
+                        <option value="high_2_3">123</option>
+                        <option value="high_2_4">124</option>
+                        <option value="high_3_1">131</option>
+                        <option value="high_3_2">132</option>
+                        <option value="high_3_3">133</option>
+                        <option value="high_3_4">134</option>
+                      </select>
                       </div>
 
                       <div>

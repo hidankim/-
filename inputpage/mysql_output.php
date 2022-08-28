@@ -13,7 +13,7 @@
 
    $con = mysqli_connect($server, $user, $password, $database, $port);
 
-   $sql = "SELECT * FROM ".$classname." WHERE datetime=\"".$datetime."\""; 
+   $sql = "SELECT * FROM schedules WHERE datetime=\"".$datetime."\" && classname=\"".$classname."\""; 
 
    $result = mysqli_query($con, $sql);
 
@@ -22,8 +22,6 @@
    {
       array_push($row, $subrow);
    }
-
-   echo "test";
 ?>
 
 <!DOCTYPE html>
