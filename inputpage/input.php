@@ -18,7 +18,7 @@
       array_push($row, $subrow);
    }
 
-   mysql_close($con);
+   mysqli_close($con);
 ?>
 
 <!DOCTYPE html>

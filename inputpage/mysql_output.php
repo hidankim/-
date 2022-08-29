@@ -22,6 +22,8 @@
    {
       array_push($row, $subrow);
    }
+
+   mysqli_close($con);
 ?>
 
 <!DOCTYPE html>
@@ -32,15 +34,9 @@
    <title></title>
 </head>
 <body>
-   <form action="mysql_output.php" method="post">
-      <button class='buttons' id='submitBtn' type="submit" onclick="submitScore()">SUBMIT</button>
-      <input type="hidden" id="DB_data" name="DB_data" value="">
-   </form>
    <script type="text/javascript">
       var js_array = <?php echo json_encode($row)?>;
-      function submitScore(){
-         document.getElementById('username').value = username;
-      }
+      console.log(js_array);
    </script>
 </body>
 </html>

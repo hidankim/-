@@ -17,5 +17,5 @@ $classname = $_POST["classname"];
 $sql = "INSERT INTO schedules(title, description, subject, datetime, time, classname) VALUES('$title','$description', '$subject', '$datetime', '$time', '$classname')";
 
 $result = mysqli_query($con, $sql);
-mysql_close($con);
+mysqli_close($con);
 ?>
