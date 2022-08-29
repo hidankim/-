@@ -1,14 +1,14 @@
 <?php
-   $server = "localhost";
-   $user = "root";
-   $port = "3306";
-   $password = "rBXAm7WN";
+   $server = "172.16.239.122";
+   $user = "subroot";
+   $port = "3308";
+   $password = "014916";
    $database = "witheconomy_calendar";
-   $datetime = "2022-08-27";
+   $datetime = date("Y-m-d");
 
    $con = mysqli_connect($server, $user, $password, $database, $port);
 
-   $sql = "SELECT * FROM schedules WHERE datetime=\"".$datetime."\""; 
+   $sql = "SELECT * FROM schedules WHERE datetime between \"".$datetime."\" and 2023-03-01 ORDER BY datetime asc"; 
 
    $result = mysqli_query($con, $sql);
 
@@ -28,7 +28,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="input.css">
-    <title>Input04</title>
+    <title>Input</title>
 </head>
 <body>
     <div class="main">
@@ -89,30 +89,30 @@
                       <div>
                       <label for="classname"><b>반</b></label>
                       <select name="classname" required>
-                        <option value="middle_1_1">011</option>
-                        <option value="middle_1_2">012</option>
-                        <option value="middle_1_3">013</option>
-                        <option value="middle_1_4">014</option>
-                        <option value="middle_2_1">021</option>
-                        <option value="middle_2_2">022</option>
-                        <option value="middle_2_3">023</option>
-                        <option value="middle_2_4">024</option>
-                        <option value="middle_3_1">031</option>
-                        <option value="middle_3_2">032</option>
-                        <option value="middle_3_3">033</option>
-                        <option value="middle_3_4">034</option>
-                        <option value="high_1_1">111</option>
-                        <option value="high_1_2">112</option>
-                        <option value="high_1_3">113</option>
-                        <option value="high_1_4">114</option>
-                        <option value="high_2_1">121</option>
-                        <option value="high_2_2">122</option>
-                        <option value="high_2_3">123</option>
-                        <option value="high_2_4">124</option>
-                        <option value="high_3_1">131</option>
-                        <option value="high_3_2">132</option>
-                        <option value="high_3_3">133</option>
-                        <option value="high_3_4">134</option>
+                        <option value="middle_1_1">middle_1_1</option>
+                        <option value="middle_1_2">middle_1_2</option>
+                        <option value="middle_1_3">middle_1_3</option>
+                        <option value="middle_1_4">middle_1_4</option>
+                        <option value="middle_2_1">middle_2_1</option>
+                        <option value="middle_2_2">middle_2_2</option>
+                        <option value="middle_2_3">middle_2_3</option>
+                        <option value="middle_2_4">middle_2_4</option>
+                        <option value="middle_3_1">middle_3_1</option>
+                        <option value="middle_3_2">middle_3_2</option>
+                        <option value="middle_3_3">middle_3_3</option>
+                        <option value="middle_3_4">middle_3_4</option>
+                        <option value="high_1_1">high_1_1</option>
+                        <option value="high_1_2">high_1_2</option>
+                        <option value="high_1_3">high_1_3</option>
+                        <option value="high_1_4">high_1_4</option>
+                        <option value="high_2_1">high_2_1</option>
+                        <option value="high_2_2">high_2_2</option>
+                        <option value="high_2_3">high_2_3</option>
+                        <option value="high_2_4">high_2_4</option>
+                        <option value="high_3_1">high_3_1</option>
+                        <option value="high_3_2">high_3_2</option>
+                        <option value="high_3_3">high_3_3</option>
+                        <option value="high_3_4">high_3_4</option>
                       </select>
                       </div>
 
