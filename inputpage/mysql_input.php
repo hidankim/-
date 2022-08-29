@@ -12,9 +12,10 @@ $description = $_POST["info"];
 $subject = $_POST["subject"];
 $datetime = $_POST["date"];
 $time = $_POST["period"];
+$classname = $_POST["classname"];
 
-$sql = "INSERT INTO middle_1_1(title, description, subject, datetime, time) VALUES('$title','$description', '$subject', '$datetime', '$time')";
+$sql = "INSERT INTO schedules(title, description, subject, datetime, time, classname) VALUES('$title','$description', '$subject', '$datetime', '$time', '$classname')";
 
 $result = mysqli_query($con, $sql);
-mysql_close($con);
+mysqli_close($con);
 ?>

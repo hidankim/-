@@ -65,13 +65,13 @@
     </div>
 
     <form action="mysql_output.php" method="post">
-      <button class='buttons' id='submitBtn' type="submit" onclick="submitScore()">SUBMIT</button>
+      <button class='buttons' id='submitBtn' type="submit" onclick="submitInfo()">SUBMIT</button>
       <input type="hidden" id="DB_data" name="DB_data" value="">
     </form>
   </body>
   <script src="./ms11.js"></script>
   <script type="text/javascript">
-    function submitScore(){
+    function submitInfo(){
       document.getElementById('DB_data').value = ["middle_1_1", "2022-08-27"]; //여기서 반, 날짜 알 수 있는 배열 집어넣기
     }
   </script>

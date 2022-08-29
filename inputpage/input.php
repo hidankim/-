@@ -1,14 +1,14 @@
 <?php
-   $server = "localhost";
-   $user = "root";
-   $port = "3306";
-   $password = "rBXAm7WN";
+   $server = "172.16.239.122";
+   $user = "subroot";
+   $port = "3308";
+   $password = "014916";
    $database = "witheconomy_calendar";
-   $datetime = "2022-08-27";
+   $datetime = date("Y-m-d");
 
    $con = mysqli_connect($server, $user, $password, $database, $port);
 
-   $sql = "SELECT * FROM middle_1_1 WHERE datetime=\"".$datetime."\""; 
+   $sql = "SELECT * FROM schedules WHERE datetime between \"".$datetime."\" and 2023-03-01 ORDER BY datetime asc"; 
 
    $result = mysqli_query($con, $sql);
 
@@ -18,7 +18,7 @@
       array_push($row, $subrow);
    }
 
-   mysql_close($con);
+   mysqli_close($con);
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="input.css">
-    <title>Input04</title>
+    <title>Input</title>
 </head>
 <body>
     <div class="main">
@@ -84,6 +84,36 @@
                       <div>
                       <label for="info"><b>정보</b></label>
                       <input type="text" name="info" required>
+                      </div>
+
+                      <div>
+                      <label for="classname"><b>반</b></label>
+                      <select name="classname" required>
+                        <option value="middle_1_1">middle_1_1</option>
+                        <option value="middle_1_2">middle_1_2</option>
+                        <option value="middle_1_3">middle_1_3</option>
+                        <option value="middle_1_4">middle_1_4</option>
+                        <option value="middle_2_1">middle_2_1</option>
+                        <option value="middle_2_2">middle_2_2</option>
+                        <option value="middle_2_3">middle_2_3</option>
+                        <option value="middle_2_4">middle_2_4</option>
+                        <option value="middle_3_1">middle_3_1</option>
+                        <option value="middle_3_2">middle_3_2</option>
+                        <option value="middle_3_3">middle_3_3</option>
+                        <option value="middle_3_4">middle_3_4</option>
+                        <option value="high_1_1">high_1_1</option>
+                        <option value="high_1_2">high_1_2</option>
+                        <option value="high_1_3">high_1_3</option>
+                        <option value="high_1_4">high_1_4</option>
+                        <option value="high_2_1">high_2_1</option>
+                        <option value="high_2_2">high_2_2</option>
+                        <option value="high_2_3">high_2_3</option>
+                        <option value="high_2_4">high_2_4</option>
+                        <option value="high_3_1">high_3_1</option>
+                        <option value="high_3_2">high_3_2</option>
+                        <option value="high_3_3">high_3_3</option>
+                        <option value="high_3_4">high_3_4</option>
+                      </select>
                       </div>
 
                       <div>
