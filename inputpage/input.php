@@ -1,3 +1,26 @@
+<?php
+   $server = "localhost";
+   $user = "root";
+   $port = "3306";
+   $password = "rBXAm7WN";
+   $database = "witheconomy_calendar";
+   $datetime = "2022-08-27";
+
+   $con = mysqli_connect($server, $user, $password, $database, $port);
+
+   $sql = "SELECT * FROM schedules WHERE datetime=\"".$datetime."\""; 
+
+   $result = mysqli_query($con, $sql);
+
+   $row = array();
+   while($subrow = mysqli_fetch_row($result))
+   {
+      array_push($row, $subrow);
+   }
+
+   mysql_close($con);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +28,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="input.css">
-    <title>Input</title>
+    <title>Input04</title>
 </head>
 <body>
     <div class="main">
@@ -18,23 +41,6 @@
 
         <div class="content-wrap">
           <div class="content-right">
-            <table>
-              <tr>
-                <th>과목</th>
-                <th>날짜</th>
-                <th>교시</th>
-                <th>과목</th>
-                <th>정보</th>
-              </tr>
-
-            <?php
-            $conn = mysql_connect("locahost", "root", "", "witheconomy_calendar");
-            if ($conn -> connect_error) {
-                die("Connection failed:". $conn=> connect_error);
-            }
-            ?>
-
-            </table>
           </div>
         </div>
 
@@ -81,6 +87,36 @@
                       </div>
 
                       <div>
+                      <label for="classname"><b>반</b></label>
+                      <select name="classname" required>
+                        <option value="middle_1_1">011</option>
+                        <option value="middle_1_2">012</option>
+                        <option value="middle_1_3">013</option>
+                        <option value="middle_1_4">014</option>
+                        <option value="middle_2_1">021</option>
+                        <option value="middle_2_2">022</option>
+                        <option value="middle_2_3">023</option>
+                        <option value="middle_2_4">024</option>
+                        <option value="middle_3_1">031</option>
+                        <option value="middle_3_2">032</option>
+                        <option value="middle_3_3">033</option>
+                        <option value="middle_3_4">034</option>
+                        <option value="high_1_1">111</option>
+                        <option value="high_1_2">112</option>
+                        <option value="high_1_3">113</option>
+                        <option value="high_1_4">114</option>
+                        <option value="high_2_1">121</option>
+                        <option value="high_2_2">122</option>
+                        <option value="high_2_3">123</option>
+                        <option value="high_2_4">124</option>
+                        <option value="high_3_1">131</option>
+                        <option value="high_3_2">132</option>
+                        <option value="high_3_3">133</option>
+                        <option value="high_3_4">134</option>
+                      </select>
+                      </div>
+
+                      <div>
                       <input type="submit" name="create" value="확인">
                       </div>
                 </div>
@@ -88,7 +124,9 @@
           </div>
         </div>
       </div>
-
-      <button type="button" onclick="location.href='mysql_output.php'">값 얻기</button>
+      <script type="text/javascript">
+        var js_array = <?php echo json_encode($row)?>;
+        console.log(js_array);
+      </script>
 </body>
 </html>
