@@ -17,14 +17,14 @@
 
    $con = mysqli_connect($server, $user, $password, $database, $port);
 
-   $sql = "SELECT * FROM schedules WHERE datetime=\"".$datetime."\" && classname=\"".$classname."\""; 
+   $sql = "SELECT title, description, subject, datetime, time FROM schedules WHERE datetime=\"".$datetime."\" && classname=\"".$classname."\""; 
 
    $result = mysqli_query($con, $sql);
 
    $row = array();
    while($subrow = mysqli_fetch_row($result))
    {
-      $object = "{ \"id\":\"{$subrow[0]}\", \"title\":\"{$subrow[1]}\", \"description\":\"{$subrow[2]}\", \"subject\":\"{$subrow[3]}\", \"datetime\":\"{$subrow[4]}\", \"time\":\"{$subrow[5]}\", \"classname\":\"{$subrow[6]}\""
+      $object = "\"title\":\"{$subrow[0]}\", \"description\":\"{$subrow[1]}\", \"subject\":\"{$subrow[2]}\", \"datetime\":\"{$subrow[3]}\", \"time\":\"{$subrow[4]}\"";
       array_push($row, $object);
    }
 
