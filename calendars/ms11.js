@@ -76,6 +76,7 @@ function prev(){
     }
     today = new Date(today.getFullYear(), today.getMonth()-1, today.getDate());
     currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;'+ first.getFullYear();
+    currentTItle.value = first.getFullYear() + "-" + (first.getMonth()+1)
     removeCalendar();
     showCalendar();
 
@@ -110,6 +111,7 @@ function next(){
     }
     today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
     currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;'+ first.getFullYear();
+    currentTItle.value = first.getFullYear() + "-" + (first.getMonth()+1)
     removeCalendar();
     showCalendar();
     showMain();
@@ -123,6 +125,7 @@ currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;
 function showMain(){
     mainTodayDay.innerHTML = dayList[today.getDay()];
     mainTodayDate.innerHTML = today.getDate();
+    mainTodayDate.value = today.getDate();
     mainNowweek.innerHTML = "Week " + (Math.floor(((today.getDate() - (7 - first.getDay()))/7) - 0.1) + 2);
 }
 showMain();

@@ -32,7 +32,7 @@
                 <td>
                   <label class="prev_" id="prev"> &#60; </label>
                 </td>
-                <td align="center" id="current-year-month" colspan="5"></td>
+                <td align="center" id="current-year-month" colspan="5" value=""></td>
                 <td>
                   <label class="next_" id="next"> &#62; </label>
                 </td>
@@ -55,7 +55,7 @@
       <div class="content-left">
         <div class="main-wrap">
           <div id="main-day" class="main-day"></div>
-          <div id="main-date" class="main-date"></div>
+          <div id="main-date" class="main-date" value=""></div>
           <div id="main-week" class="main-week"></div>
         </div>
         <div class="todo-wrap">
@@ -72,7 +72,8 @@
   <script src="./ms11.js"></script>
   <script type="text/javascript">
     function submitInfo(){
-      document.getElementById('DB_data').value = ["middle_1_1", "2022-08-27"]; //여기서 반, 날짜 알 수 있는 배열 집어넣기
+      document.getElementById('DB_data').value = ["middle_1_1", "2022-08-29"]; //여기서 반, 날짜 알 수 있는 배열 집어넣기
     }
+    console.log(document.getElementById("current-year-month").value+"-"+document.getElementById("main-date"));
   </script>
 </html>
