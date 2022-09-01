@@ -4,12 +4,16 @@
    $port = "3306";
    $password = "rBXAm7WN";
    $database = "witheconomy_calendar";
-   $classDatetimeInfo = $_POST["DB_data"]; //방법: index.html에 연결된 javascript에 html의 버튼을 누르면 자동으로 지금 가리키고 있는 날짜를 form tag의 post 형식으로 보내줄 수 있는 코드를 작성해야 함 (input.html과 mysql_input.php를 연결한 방식과 비슷하게)
+/*
+   $classDatetimeInfo = json_decode(file_get_contents('php://input'));
 
    $loc = strpos($classDatetimeInfo, ",") - strlen($classDatetimeInfo);
 
    $classname = substr($classDatetimeInfo, -strlen($classDatetimeInfo), $loc);
    $datetime = substr($classDatetimeInfo, $loc+1);
+*/
+   $datetime = "2022-08-29";
+   $classname = "high_2_1";
 
    $con = mysqli_connect($server, $user, $password, $database, $port);
 
@@ -20,23 +24,12 @@
    $row = array();
    while($subrow = mysqli_fetch_row($result))
    {
-      array_push($row, $subrow);
+      $object = "{ \"id\":\"{$subrow[0]}\", \"title\":\"{$subrow[1]}\", \"description\":\"{$subrow[2]}\", \"subject\":\"{$subrow[3]}\", \"datetime\":\"{$subrow[4]}\", \"time\":\"{$subrow[5]}\", \"classname\":\"{$subrow[6]}\""
+      array_push($row, $object);
    }
+
+   $json = json_encode($row);
+   $bytes = file_put_contents("test_json", $json);
 
    mysqli_close($con);
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title></title>
-</head>
-<body>
-   <script type="text/javascript">
-      var js_array = <?php echo json_encode($row)?>;
-      console.log(js_array);
-   </script>
-</body>
-</html>

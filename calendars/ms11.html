@@ -60,20 +60,27 @@
         </div>
         <div class="todo-wrap">
           <div class="todo-title">=</div>
+          <article></article>
           
       </div>
     </div>
-
-    <form action="mysql_output.php" method="post">
-      <button class='buttons' id='submitBtn' type="submit" onclick="submitInfo()">SUBMIT</button>
-      <input type="hidden" id="DB_data" name="DB_data" value="">
-    </form>
+    <button class='buttons' id='submitBtn' type="submit" onclick="fetchPage()">SUBMIT</button>
   </body>
   <script src="./ms11.js"></script>
   <script type="text/javascript">
-    function submitInfo(){
-      document.getElementById('DB_data').value = ["middle_1_1", "2022-08-29"]; //여기서 반, 날짜 알 수 있는 배열 집어넣기
+    async function fetchPage(){
+      //var submitValue = document.getElementById("Current-year-month").value+"-"+document.getElementById("main-date");
+      var submitValue = "high_2_1,2022-08-29";
+
+      await fetch("output.php", {
+        method:"post",
+        headers:{"Content-Type":"application/json; charset=UTF-8"},
+        body:JSON.stringify(submitValue)
+      });
+
+      var text = await fetch("test_json").then(res => res.text().then(res => JSON.parse(res)));
+
+      console.log(text);
     }
-    console.log(document.getElementById("current-year-month").value+"-"+document.getElementById("main-date"));
   </script>
 </html>
