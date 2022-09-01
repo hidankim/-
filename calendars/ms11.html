@@ -59,10 +59,14 @@
           <div id="main-week" class="main-week"></div>
         </div>
         <div class="todo-wrap">
-          <p id="todo-list">
-          </p>
-        </div>
+          <div class="todo-title">
+            <p id="todo-list">
+            </p>
+          </div>
+          <article></article>
+          
       </div>
+    </div>
     <button class='buttons' id='submitBtn' type="submit" onclick="fetchPage()">SUBMIT</button>
   </body>
   <script src="./ms11.js"></script>
@@ -71,13 +75,13 @@
       //var submitValue = document.getElementById("Current-year-month").value+"-"+document.getElementById("main-date");
       var submitValue = "high_2_1,2022-08-29";
 
-      await fetch("output.php", {
+      await fetch("../inputpage/mysql_output.php", {
         method:"post",
         headers:{"Content-Type":"application/json; charset=UTF-8"},
         body:JSON.stringify(submitValue)
       });
 
-      var text = await fetch("../inputpage/test_json").then(res => res.text().then(res => {
+      var text = await fetch("../inputpage/convert_json").then(res => res.text().then(res => {
         res = JSON.parse(res);
 
         for(var i = 0 ; i < res.length ; i++)
@@ -99,6 +103,8 @@
         value += "</tr>";
       }
       value += "</table>";
+
+      console.log(value);
 
       document.getElementById("todo-list").innerHTML = value;
     }
