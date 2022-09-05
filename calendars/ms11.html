@@ -68,20 +68,21 @@
       </div>
     </div>
     <button class='buttons' id='submitBtn' type="submit" onclick="fetchPage()">SUBMIT</button>
-  </body>
-  <script src="./ms11.js"></script>
-  <script type="text/javascript">
+    <script src="./ms11.js?ver=62"></script>
+    <script type="text/javascript">
     async function fetchPage(){
       //var submitValue = document.getElementById("Current-year-month").value+"-"+document.getElementById("main-date");
-      var submitValue = "high_2_1,2022-08-29";
+      var submitValue = ["= \"2022-08-29\"", "high_2_1", "./test_json"];
 
-      await fetch("../inputpage/mysql_output.php", {
+      console.log(JSON.stringify(submitValue));
+
+      await fetch("output.php", {
         method:"post",
         headers:{"Content-Type":"application/json; charset=UTF-8"},
         body:JSON.stringify(submitValue)
       });
 
-      var text = await fetch("../inputpage/convert_json").then(res => res.text().then(res => {
+      var text = await fetch("../inputpage/test_json").then(res => res.text().then(res => {
         res = JSON.parse(res);
 
         for(var i = 0 ; i < res.length ; i++)
@@ -107,6 +108,22 @@
       console.log(value);
 
       document.getElementById("todo-list").innerHTML = value;
+/*
+      let value = "<table border=\"1\"><th>제목</th><th>내용</th><th>과목</th><th>날짜</th><th>교시</th>";
+
+      for(var i = 0 ; i < text.length ; i++)
+      {
+        value += "<tr>"
+        for(var j in text[i])
+        {
+          value += "<td>"+text[i].j+"</td>";
+        }
+        value += "</td>";
+      }
+      value += "</table>";
+
+      document.getElementById("todo-list").innerHTML = value;*/
     }
   </script>
+  </body>
 </html>
