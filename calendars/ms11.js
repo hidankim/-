@@ -18,6 +18,60 @@ if(first.getFullYear() % 4 === 0){
     pageYear = notLeapYear;
 }
 
+async function applyInfo()
+{
+    let todayDate = first.getFullYear()+"-"+(first.getMonth()+1);
+    let range = "between \""+todayDate+"-"+"01\" and \""+todayDate+"-"+pageYear[first.getMonth()]+"\"";
+    let info = await fetchDate([range, "high_2_1", "./json"]);
+    let valCnt = 0;
+    for(var i = 1 ; i <= pageYear[first.getMonth()] ; i++)
+    {
+        var $ol = document.createElement("ol");
+        while(info[valCnt])
+        {
+            var inst = info[valCnt]["datetime"];
+            var instInfo = inst.substring(inst.length-2);
+            if(instInfo.substring(0,1) === "0")
+            {
+                instInfo = instInfo.substring(1);
+            }
+            if(instInfo == i){
+                var $li = document.createElement("li");
+                $li.textContent = info[valCnt]["title"].substring(0, 3)+"...";
+                $ol.appendChild($li);
+                valCnt++;
+            }
+            else
+            {
+                break;
+            }
+        }
+        document.getElementById(i).appendChild($ol);
+    }
+}
+
+async function fetchDate(info)
+{
+    await fetch("./output.php", {
+        method:"post",
+        headers:{"Content-Type":"application/json; charset=UTF-8"},
+        body:JSON.stringify(info)
+    });
+
+    var text = await fetch("../inputpage/json").then(res => res.text().then(res => {
+        res = JSON.parse(res);
+
+        for(var i = 0 ; i < res.length ; i++)
+        {
+            res[i] = JSON.parse(res[i]);
+        }
+
+        return res;
+    }));
+
+    return text;
+}
+
 function showCalendar(){
     let monthCnt = 100;
     let cnt = 1;
@@ -33,13 +87,14 @@ function showCalendar(){
                 $td.textContent = cnt;
                 $td.setAttribute('id', cnt);
                 $tr.appendChild($td);
-              
                 cnt++;
             }
         }
         monthCnt++;
         calendarBody.appendChild($tr);
     }
+
+    applyInfo();
 }
 showCalendar();
 
@@ -78,7 +133,7 @@ function prev(){
     currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;'+ first.getFullYear();
     currentTItle.value = first.getFullYear() + "-" + (first.getMonth()+1)
     removeCalendar();
-    showCalendar();
+    (async function(){ await showCalendar(); })();
 
     showMain();
     clickedDate1 = document.getElementById(today.getDate());
@@ -113,7 +168,7 @@ function next(){
     currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;'+ first.getFullYear();
     currentTItle.value = first.getFullYear() + "-" + (first.getMonth()+1)
     removeCalendar();
-    showCalendar();
+    (async function(){ await showCalendar(); })();
     showMain();
     clickedDate1 = document.getElementById(today.getDate());
     clickedDate1.classList.add('active');
@@ -211,7 +266,7 @@ function reshowingList(){
         }
     }
 
-}
+}/*
 var inputBox = document.getElementById('input-box');
 var inputDate = document.getElementById('input-data');
 var inputList = document.getElementById('input-list');
@@ -243,7 +298,7 @@ function addTodoList(){
         $div.remove();
         $btn.remove();
     }
-}
+}*/
 
 
 //function writeUnderDate(){
@@ -254,7 +309,7 @@ function addTodoList(){
 //}
 
 
-console.log(keyValue);
+//console.log(keyValue);
 function checkList(e){
     e.currentTarget.classList.add('checked');
 }

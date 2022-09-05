@@ -1,8 +1,8 @@
 <?php 
-$server = "192.168.200.136";
-$user = "subroot";
-$port = "3308";
-$password = "014916";
+$server = "192.168.1.103";
+$user = "test";
+$port = "3306";
+$password = "1112";
 $database = "witheconomy_calendar";
 
 $con = mysqli_connect($server, $user, $password, $database, $port);
