@@ -1,132 +1,269 @@
-body{
-    margin: 0px;
-    padding: 0px;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    height: 100vh;
-    background: url(pictures/how\ to\ use.png);
-    background-size: 100%;
-    background-repeat: no-repeat; 
-    background-position-y: -30px;
+@media screen and (min-width: 1000px){
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        height: 100vh;
+        background: url(pictures/how\ to\ use.png);
+        background-size: 100%;
+        background-repeat: no-repeat; 
+        background-position-y: -30px;
+    }
+
+    @font-face {
+        font-family: parisNineteenSeventy;
+        src: url(fonts/Chalet-ParisNineteenSeventy_10022.ttf);
+    }
+
+    .header{
+        min-height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+    nav{
+        position: relative;
+        top:-40px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 1vh;
+        font-family: parisNineteenSeventy;
+
+    }
+
+    .clublogo{
+        position: relative;
+        bottom:-75px;
+        left: -100px;
+    }
+
+    .clubtext{
+        position: relative;
+        top:-42px;
+        left: 30px;
+    }
+
+    .logo{
+        letter-spacing: 5px;
+        font-size: 25px;
+        color: black;
+        font-family: parisNineteenSeventy;
+    }
+
+    .nav-links{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        position: relative;
+        left: 100px;
+        top: 35px;
+    }
+
+    .nav-links li{
+        list-style: none;
+        color: black;
+    }
+
+    .nav-links a{
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 20px;
+        color: black;
+    }
+
+    .nav-links a::after{
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: #000000;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+
+    .nav-links a:hover::after{
+        width: 100%;
+    }
+
+    .text-box{
+        position: absolute;
+        left: 25%;
+        top: 36%;
+        transform: translate(-50%, -50%);
+        padding: 1px;
+        padding-bottom: 50px;
+        font-family: parisNineteenSeventy;
+        font-size: 13px; 
+
+    }
+
+    .text-box h1{
+        position: relative;
+        font-size: 35px;
+    }
+
+    .text-box2 h1{
+        position: relative;
+        font-size: 35px;
+        width: 150%;
+    }
+
+    h4 {
+        position: relative;
+        top: 60px;
+        font-size: 20px;
+        left: -75px;
+    }
+
+    .text-box2{
+        position: absolute;
+        left: 26.2%;
+        top: 70%;
+        transform: translate(-50%, -50%);
+        padding: 1px;
+        padding-bottom: 50px;
+        font-family: parisNineteenSeventy;
+        font-size: 13px; 
+
+    }
 }
 
-@font-face {
-    font-family: parisNineteenSeventy;
-    src: url(fonts/Chalet-ParisNineteenSeventy_10022.ttf);
-}
+@media screen and (max-width: 1000px){
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        height: 100vh;
+        background: url(pictures/KakaoTalk_Photo_2022-09-04-22-19-27.jpeg);
+        background-size: 100%;
+        background-repeat: no-repeat; 
+        background-position-y: -30px;
+    }
 
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
+    @font-face {
+        font-family: parisNineteenSeventy;
+        src: url(fonts/Chalet-ParisNineteenSeventy_10022.ttf);
+    }
 
-nav{
-    position: relative;
-    top:-40px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 1vh;
-    font-family: parisNineteenSeventy;
+    .header{
+        min-height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
 
-}
+    nav{
+        position: relative;
+        top:-40px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 1vh;
+        font-family: parisNineteenSeventy;
 
-.clublogo{
-    position: relative;
-    bottom:-75px;
-    left: -100px;
-}
+    }
 
-.clubtext{
-    position: relative;
-    top:-42px;
-    left: 30px;
-}
+    .clublogo{
+        position: relative;
+        bottom:-75px;
+        left: -100px;
+    }
 
-.logo{
-    letter-spacing: 5px;
-    font-size: 25px;
-    color: black;
-    font-family: parisNineteenSeventy;
-}
+    .clubtext{
+        position: relative;
+        top:-42px;
+        left: 30px;
+    }
 
-.nav-links{
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    position: relative;
-    left: 100px;
-    top: 35px;
-}
+    .logo{
+        letter-spacing: 5px;
+        font-size: 25px;
+        color: black;
+        font-family: parisNineteenSeventy;
+    }
 
-.nav-links li{
-    list-style: none;
-    color: black;
-}
+    .nav-links{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        position: relative;
+        left: 100px;
+        top: 35px;
+    }
 
-.nav-links a{
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 20px;
-    color: black;
-}
+    .nav-links li{
+        list-style: none;
+        color: black;
+    }
 
-.nav-links a::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #000000;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
+    .nav-links a{
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 20px;
+        color: black;
+    }
 
-.nav-links a:hover::after{
-    width: 100%;
-}
+    .nav-links a::after{
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: #000000;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
 
-.text-box{
-    position: absolute;
-    left: 25%;
-    top: 36%;
-    transform: translate(-50%, -50%);
-    padding: 1px;
-    padding-bottom: 50px;
-    font-family: parisNineteenSeventy;
-    font-size: 13px; 
+    .nav-links a:hover::after{
+        width: 100%;
+    }
 
-}
+    .text-box{
+        position: absolute;
+        left: 25%;
+        top: 36%;
+        transform: translate(-50%, -50%);
+        padding: 1px;
+        padding-bottom: 50px;
+        font-family: parisNineteenSeventy;
+        font-size: 13px; 
 
-.text-box h1{
-    position: relative;
-    font-size: 35px;
-}
+    }
 
-.text-box2 h1{
-    position: relative;
-    font-size: 35px;
-    width: 150%;
-}
+    .text-box h1{
+        position: relative;
+        font-size: 35px;
+    }
 
-h4 {
-    position: relative;
-    top: 60px;
-    font-size: 20px;
-    left: -75px;
-}
+    .text-box2 h1{
+        position: relative;
+        font-size: 35px;
+        width: 150%;
+    }
 
-.text-box2{
-    position: absolute;
-    left: 26.2%;
-    top: 70%;
-    transform: translate(-50%, -50%);
-    padding: 1px;
-    padding-bottom: 50px;
-    font-family: parisNineteenSeventy;
-    font-size: 13px; 
+    h4 {
+        position: relative;
+        top: 60px;
+        font-size: 20px;
+        left: -75px;
+    }
 
+    .text-box2{
+        position: absolute;
+        left: 26.2%;
+        top: 70%;
+        transform: translate(-50%, -50%);
+        padding: 1px;
+        padding-bottom: 50px;
+        font-family: parisNineteenSeventy;
+        font-size: 13px; 
+
+    }
 }

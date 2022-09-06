@@ -1,26 +1,3 @@
-<?php
-   $server = "172.16.239.122";
-   $user = "subroot";
-   $port = "3308";
-   $password = "014916";
-   $database = "witheconomy_calendar";
-   $datetime = date("Y-m-d");
-
-   $con = mysqli_connect($server, $user, $password, $database, $port);
-
-   $sql = "SELECT * FROM schedules WHERE datetime between \"".$datetime."\" and 2023-03-01 ORDER BY datetime asc"; 
-
-   $result = mysqli_query($con, $sql);
-
-   $row = array();
-   while($subrow = mysqli_fetch_row($result))
-   {
-      array_push($row, $subrow);
-   }
-
-   mysqli_close($con);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="input.css">
-    <title>Input</title>
+    <title>Input01</title>
 </head>
 <body>
     <div class="main">
@@ -41,6 +18,7 @@
 
         <div class="content-wrap">
           <div class="content-right">
+            <p id="content"></p>
           </div>
         </div>
 
@@ -117,7 +95,7 @@
                       </div>
 
                       <div>
-                      <input type="submit" name="create" value="확인">
+                      <button type="submit">제출</button>
                       </div>
                 </div>
               </form>
@@ -125,8 +103,58 @@
         </div>
       </div>
       <script type="text/javascript">
-        var js_array = <?php echo json_encode($row)?>;
-        console.log(js_array);
+        async function fetchPage(){
+          //var submitValue = document.getElementById("Current-year-month").value+"-"+document.getElementById("main-date");
+          var submitValue = ["between \"2022-09-01\" and \"2022-9-30\"", "high_2_1", "./json"];
+
+          await fetch("./calendars/output.php", {
+            method:"post",
+            headers:{"Content-Type":"application/json; charset=UTF-8"},
+            body:JSON.stringify(submitValue)
+          });
+
+          var text = await fetch("./test_json?ver=1").then(res => res.text().then(res => {
+            res = JSON.parse(res);
+
+            for(var i = 0 ; i < res.length ; i++)
+            {
+              res[i] = JSON.parse(res[i]);
+            }
+
+            return res;
+          }));
+
+          console.log(text);
+
+          let value = "<table border=\"1\"><th>제목</th><th>내용</th><th>과목</th><th>날짜</th><th>교시</th>";
+          for(var i = 0 ; i < text.length ; i++)
+          {
+            value += "<tr>"
+            for(var j in text[i])
+            {
+              value += "<td>"+text[i][j]+"</td>";
+            }
+            value += "</tr>";
+          }
+          value += "</table>";
+
+          document.getElementById("content").innerHTML = value;
+        }
+
+        fetchPage();
+
+        document.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const form = e.target;
+      
+          await fetch(form.action, {
+            method: form.method,
+            body: new FormData(form)
+          });
+
+          await fetchPage();
+        });
       </script>
 </body>
 </html>

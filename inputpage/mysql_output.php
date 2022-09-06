@@ -1,23 +1,18 @@
 <?php
-   $server = "localhost";
-   $user = "root";
+   $server = "192.168.1.103";
+   $user = "test";
    $port = "3306";
    $password = "rBXAm7WN";
    $database = "witheconomy_calendar";
-/*
-   $classDatetimeInfo = json_decode(file_get_contents('php://input'));
+   $submitValue = json_decode(file_get_contents('php://input'));
 
-   $loc = strpos($classDatetimeInfo, ",") - strlen($classDatetimeInfo);
-
-   $classname = substr($classDatetimeInfo, -strlen($classDatetimeInfo), $loc);
-   $datetime = substr($classDatetimeInfo, $loc+1);
-*/
-   $datetime = "2022-08-29";
-   $classname = "high_2_1";
+   $datetime = $submitValue[0];
+   $classname = $submitValue[1];
+   $storage = $submitValue[2];
 
    $con = mysqli_connect($server, $user, $password, $database, $port);
 
-   $sql = "SELECT title, description, subject, datetime, time FROM schedules WHERE datetime=\"".$datetime."\" && classname=\"".$classname."\"";
+   $sql = "SELECT title, description, subject, datetime, time FROM schedules WHERE datetime ".$datetime." && classname=\"".$classname."\" ORDER BY datetime asc";
 
    $result = mysqli_query($con, $sql);
 
@@ -29,7 +24,7 @@
    }
 
    $json = json_encode($row);
-   $bytes = file_put_contents("convert_json", $json);
+   $bytes = file_put_contents($storage, $json);
 
    mysqli_close($con);
 ?>
