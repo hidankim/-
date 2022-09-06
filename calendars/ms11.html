@@ -32,7 +32,7 @@
                 <td>
                   <label class="prev_" id="prev"> &#60; </label>
                 </td>
-                <td align="center" id="current-year-month" colspan="5" value=""></td>
+                <td align="center" id="current-year-month" colspan="5"></td>
                 <td>
                   <label class="next_" id="next"> &#62; </label>
                 </td>
@@ -68,21 +68,26 @@
       </div>
     </div>
     <button class='buttons' id='submitBtn' type="submit" onclick="fetchPage()">SUBMIT</button>
-    <script src="./ms11.js?ver=62"></script>
+    <script src="./ms11.js?ver=71"></script>
     <script type="text/javascript">
     async function fetchPage(){
-      //var submitValue = document.getElementById("Current-year-month").value+"-"+document.getElementById("main-date");
-      var submitValue = ["= \"2022-08-29\"", "high_2_1", "./test_json"];
+      let a = document.getElementById("current-year-month").innerHTML.replaceAll("&nbsp;", "");
+      let year = a.slice(-4);
+      let month = a.slice(0, -4);
+      month = distinguishMonth(month);
+
+      var submit = "= \""+year+"-"+month+"-"+document.getElementById("main-date").value+"\"";
+      var submitValue = [submit, "high_2_1", "./json"];
 
       console.log(JSON.stringify(submitValue));
 
-      await fetch("output.php", {
+      await fetch("../inputpage/mysql_output.php?ver=2", {
         method:"post",
         headers:{"Content-Type":"application/json; charset=UTF-8"},
         body:JSON.stringify(submitValue)
       });
 
-      var text = await fetch("../inputpage/test_json").then(res => res.text().then(res => {
+      var text = await fetch("../inputpage/json?ver=2").then(res => res.text().then(res => {
         res = JSON.parse(res);
 
         for(var i = 0 ; i < res.length ; i++)
@@ -108,21 +113,26 @@
       console.log(value);
 
       document.getElementById("todo-list").innerHTML = value;
-/*
-      let value = "<table border=\"1\"><th>제목</th><th>내용</th><th>과목</th><th>날짜</th><th>교시</th>";
+    }
 
-      for(var i = 0 ; i < text.length ; i++)
+    function distinguishMonth(cse)
+    {
+      switch(cse)
       {
-        value += "<tr>"
-        for(var j in text[i])
-        {
-          value += "<td>"+text[i].j+"</td>";
-        }
-        value += "</td>";
+        case "January":return 1;
+        case "February":return 2;
+        case "March":return 3;
+        case "April":return 4;
+        case "May":return 5;
+        case "June":return 6;
+        case "July":return 7;
+        case "August":return 8;
+        case "September":return 9;
+        case "October":return 10;
+        case "November":return 11;
+        case "December":return 12;
+        default:return 0;
       }
-      value += "</table>";
-
-      document.getElementById("todo-list").innerHTML = value;*/
     }
   </script>
   </body>

@@ -1,8 +1,8 @@
 <?php
-   $server = "192.168.1.103";
+   $server = "172.16.226.244";
    $user = "test";
    $port = "3306";
-   $password = "rBXAm7WN";
+   $password = "1112";
    $database = "witheconomy_calendar";
    $submitValue = json_decode(file_get_contents('php://input'));
 

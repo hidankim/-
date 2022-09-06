@@ -52,13 +52,13 @@ async function applyInfo()
 
 async function fetchDate(info)
 {
-    await fetch("./output.php", {
+    await fetch("../inputpage/mysql_output.php?ver=2", {
         method:"post",
         headers:{"Content-Type":"application/json; charset=UTF-8"},
         body:JSON.stringify(info)
     });
 
-    var text = await fetch("../inputpage/json").then(res => res.text().then(res => {
+    var text = await fetch("../inputpage/json?ver=2").then(res => res.text().then(res => {
         res = JSON.parse(res);
 
         for(var i = 0 ; i < res.length ; i++)
@@ -108,11 +108,11 @@ function removeCalendar(){
 }
 
 function prev(){
-    inputBox.value = "";
     const $divs = document.querySelectorAll('#input-list > div');
     $divs.forEach(function(e){
       e.remove();
     });
+    console.log("prev");
     const $btns = document.querySelectorAll('#input-list > button');
     $btns.forEach(function(e1){
       e1.remove();
@@ -131,9 +131,8 @@ function prev(){
     }
     today = new Date(today.getFullYear(), today.getMonth()-1, today.getDate());
     currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;'+ first.getFullYear();
-    currentTItle.value = first.getFullYear() + "-" + (first.getMonth()+1)
     removeCalendar();
-    (async function(){ await showCalendar(); })();
+    showCalendar();
 
     showMain();
     clickedDate1 = document.getElementById(today.getDate());
@@ -143,7 +142,6 @@ function prev(){
 }
 
 function next(){
-    inputBox.value = "";
     const $divs = document.querySelectorAll('#input-list > div');
     $divs.forEach(function(e){
       e.remove();
@@ -166,9 +164,8 @@ function next(){
     }
     today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
     currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;'+ first.getFullYear();
-    currentTItle.value = first.getFullYear() + "-" + (first.getMonth()+1)
     removeCalendar();
-    (async function(){ await showCalendar(); })();
+    showCalendar();
     showMain();
     clickedDate1 = document.getElementById(today.getDate());
     clickedDate1.classList.add('active');
@@ -189,7 +186,7 @@ var clickedDate1 = document.getElementById(today.getDate());
 clickedDate1.classList.add('active');
 var prevBtn = document.getElementById('prev');
 var nextBtn = document.getElementById('next');
-prevBtn.addEventListener('click',prev);
+prevBtn.addEventListener('click', prev);
 nextBtn.addEventListener('click',next);
 var tdGroup = [];
 function clickStart(){
@@ -258,7 +255,6 @@ function reshowingList(){
             inputList.appendChild($btn);
             $div.addEventListener('click',checkList);
             $btn.addEventListener('click',deleteTodo);
-            inputBox.value = '';
             function deleteTodo(){
                 $div.remove();
                 $btn.remove();
@@ -266,50 +262,8 @@ function reshowingList(){
         }
     }
 
-}/*
-var inputBox = document.getElementById('input-box');
-var inputDate = document.getElementById('input-data');
-var inputList = document.getElementById('input-list');
-var delText = 'X';
-inputDate.addEventListener('click',addTodoList);
-var dataCnt = 1;
-var keyValue = today.getFullYear() + '' + today.getMonth()+ '' + today.getDate();
-let todoList = [];
-todoList[keyValue] = [];
-function addTodoList(){
-    var $div = document.createElement('div');
-    $div.textContent = '-' + inputBox.value;
-    var $btn = document.createElement('button');
-    $btn.setAttribute('type', 'button');
-    $btn.setAttribute('id', 'del-ata');
-    $btn.setAttribute('id', dataCnt+keyValue);
-    $btn.setAttribute('class', "del-data");
-    $btn.textContent = delText;
-    inputList.appendChild($div);
-    inputList.appendChild($btn);
-    todoList[keyValue].push(inputBox.value);
-    dataCnt++;
-    inputBox.value = '';
-    $div.addEventListener('click',checkList);
-    $btn.addEventListener('click',deleteTodo);
-    //append to list
-    
-    function deleteTodo(){
-        $div.remove();
-        $btn.remove();
-    }
-}*/
+}
 
-
-//function writeUnderDate(){
-//    let info = document.getElementById('input-box2').value;
-//    var now = mainTodayDate;
-//    $d = document.createElement('div');
-//   document.getElementById('now').appendChild()
-//}
-
-
-//console.log(keyValue);
 function checkList(e){
     e.currentTarget.classList.add('checked');
 }

@@ -107,13 +107,13 @@
           //var submitValue = document.getElementById("Current-year-month").value+"-"+document.getElementById("main-date");
           var submitValue = ["between \"2022-09-01\" and \"2022-9-30\"", "high_2_1", "./json"];
 
-          await fetch("./calendars/output.php", {
+          await fetch("./mysql_output.php", {
             method:"post",
             headers:{"Content-Type":"application/json; charset=UTF-8"},
             body:JSON.stringify(submitValue)
           });
 
-          var text = await fetch("./test_json?ver=1").then(res => res.text().then(res => {
+          var text = await fetch("./json").then(res => res.text().then(res => {
             res = JSON.parse(res);
 
             for(var i = 0 ; i < res.length ; i++)
