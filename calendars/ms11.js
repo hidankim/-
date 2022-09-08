@@ -18,8 +18,28 @@ if(first.getFullYear() % 4 === 0){
     pageYear = notLeapYear;
 }
 
+function startLoading()
+{
+    let load = document.createElement("style");
+    load.setAttribute("type", "text/css");
+    load.innerHTML = ".loader{ border: 16px solid #f3f3f3; border-top: 16px solid #3498db; border-radius: 50%; width: 120px; height: 120px; animation: spin 1.5s linear infinite; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); } @keyframes spin{0% {transform: translate(-50%, -50%) rotate(0deg);} 100% {transform: translate(-50%, -50%) rotate(360deg);}}";
+    document.getElementById("loader").appendChild(load);
+}
+
+function stopLoading()
+{
+    var cell = document.getElementById("loader");
+
+    while ( cell.hasChildNodes() )
+    {
+        cell.removeChild( cell.firstChild );
+    }
+}
+
 async function applyInfo()
 {
+    startLoading();
+
     let todayDate = first.getFullYear()+"-"+(first.getMonth()+1);
     let range = "between \""+todayDate+"-"+"01\" and \""+todayDate+"-"+pageYear[first.getMonth()]+"\"";
     let info = await fetchDate([range, "high_2_1", "./json"]);
@@ -48,6 +68,8 @@ async function applyInfo()
         }
         document.getElementById(i).appendChild($ol);
     }
+
+    stopLoading();
 }
 
 async function fetchDate(info)
@@ -209,61 +231,3 @@ function changeToday(e){
     reshowingList();
 }
 clickStart();
-function reshowingList(){
-    keyValue = today.getFullYear() + '' + today.getMonth()+ '' + today.getDate();
-    if(todoList[keyValue] === undefined){
-        inputList.textContent = '';
-        todoList[keyValue] = [];
-        const $divs = document.querySelectorAll('#input-list > div');
-        $divs.forEach(function(e){
-          e.remove();
-        });
-        const $btns = document.querySelectorAll('#input-list > button');
-        $btns.forEach(function(e1){
-          e1.remove();
-        });
-    }else if(todoList[keyValue].length ===0){
-        inputList.textContent = "";
-        const $divs = document.querySelectorAll('#input-list > div');
-        $divs.forEach(function(e){
-          e.remove();
-        });
-        const $btns = document.querySelectorAll('#input-list > button');
-        $btns.forEach(function(e1){
-          e1.remove();
-        });
-    }else{
-        const $divs = document.querySelectorAll('#input-list > div');
-        $divs.forEach(function(e){
-          e.remove();
-        });
-        const $btns = document.querySelectorAll('#input-list > button');
-        $btns.forEach(function(e1){
-          e1.remove();
-        });
-        var $div = document.createElement('div');
-        for(var i = 0; i < todoList[keyValue].length; i++){
-            var $div = document.createElement('div');
-            $div.textContent = '-' + todoList[keyValue][i];
-            var $btn = document.createElement('button');
-            $btn.setAttribute('type', 'button');
-            $btn.setAttribute('id', 'del-ata');
-            $btn.setAttribute('id', dataCnt+keyValue);
-            $btn.setAttribute('class', 'del-data');
-            $btn.textContent = delText;
-            inputList.appendChild($div);
-            inputList.appendChild($btn);
-            $div.addEventListener('click',checkList);
-            $btn.addEventListener('click',deleteTodo);
-            function deleteTodo(){
-                $div.remove();
-                $btn.remove();
-            }
-        }
-    }
-
-}
-
-function checkList(e){
-    e.currentTarget.classList.add('checked');
-}

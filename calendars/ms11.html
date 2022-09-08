@@ -8,6 +8,7 @@
     <title>calendar</title>
   </head>
   <body>
+    <div class="loader" id="loader"></div>
     <div class="main">
       <div class="class-number">
         MS 1-1
@@ -68,9 +69,12 @@
       </div>
     </div>
     <button class='buttons' id='submitBtn' type="submit" onclick="fetchPage()">SUBMIT</button>
-    <script src="./ms11.js?ver=71"></script>
+    <script src="./ms11.js?ver=73"></script>
     <script type="text/javascript">
     async function fetchPage(){
+      document.getElementById("submitBtn").setAttribute("disabled", "disabled");
+      startLoading();
+
       let a = document.getElementById("current-year-month").innerHTML.replaceAll("&nbsp;", "");
       let year = a.slice(-4);
       let month = a.slice(0, -4);
@@ -101,18 +105,21 @@
       let value = "<table border=\"1\"><th>제목</th><th>내용</th><th>과목</th><th>날짜</th><th>교시</th>";
       for(var i = 0 ; i < text.length ; i++)
       {
-        value += "<tr>"
+        value += "<tr>";
         for(var j in text[i])
         {
-          value += "<td>"+text[i][j]+"</td>";
+          if(j !== "id"){
+            value += "<td>"+text[i][j]+"</td>";
+          }
         }
         value += "</tr>";
       }
       value += "</table>";
 
-      console.log(value);
-
       document.getElementById("todo-list").innerHTML = value;
+
+      stopLoading();
+      document.getElementById("submitBtn").removeAttribute("disabled");
     }
 
     function distinguishMonth(cse)
@@ -132,6 +139,24 @@
         case "November":return 11;
         case "December":return 12;
         default:return 0;
+      }
+    }
+
+    function startLoading()
+    {
+      let load = document.createElement("style");
+      load.setAttribute("type", "text/css");
+      load.innerHTML = ".loader{ border: 16px solid #f3f3f3; border-top: 16px solid #3498db; border-radius: 50%; width: 120px; height: 120px; animation: spin 1.5s linear infinite; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); } @keyframes spin{0% {transform: translate(-50%, -50%) rotate(0deg);} 100% {transform: translate(-50%, -50%) rotate(360deg);}}";
+      document.getElementById("loader").appendChild(load);
+    }
+
+    function stopLoading()
+    {
+      var cell = document.getElementById("loader");
+
+      while ( cell.hasChildNodes() )
+      {
+           cell.removeChild( cell.firstChild );       
       }
     }
   </script>

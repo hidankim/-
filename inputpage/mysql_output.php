@@ -1,5 +1,5 @@
 <?php
-   $server = "172.16.226.244";
+   $server = "localhost";
    $user = "test";
    $port = "3306";
    $password = "1112";
@@ -12,14 +12,14 @@
 
    $con = mysqli_connect($server, $user, $password, $database, $port);
 
-   $sql = "SELECT title, description, subject, datetime, time FROM schedules WHERE datetime ".$datetime." && classname=\"".$classname."\" ORDER BY datetime asc";
+   $sql = "SELECT title, description, subject, datetime, time, id FROM schedules WHERE datetime ".$datetime." && classname=\"".$classname."\" ORDER BY datetime asc";
 
    $result = mysqli_query($con, $sql);
 
    $row = array();
    while($subrow = mysqli_fetch_row($result))
    {
-      $object = '{"title":"'.$subrow[0].'", "description":"'.$subrow[1].'", "subject":"'.$subrow[2].'", "datetime":"'.$subrow[3].'", "time":"'.$subrow[4].'"}';
+      $object = '{"title":"'.$subrow[0].'", "description":"'.$subrow[1].'", "subject":"'.$subrow[2].'", "datetime":"'.$subrow[3].'", "time":"'.$subrow[4].'", "id":"'.$subrow[5].'"}';
       array_push($row, $object);
    }
 
