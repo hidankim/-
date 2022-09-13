@@ -26,14 +26,14 @@ body{
 
 .clublogo{
     position: relative;
-    bottom:-75px;
-    left: -100px;
+    bottom: -50px;
+    left: -220px;
 }
 
 .clubtext{
     position: relative;
-    top:-42px;
-    left: 30px;
+    top:-22px;
+    left: -150px;
 }
 
 .logo{
@@ -48,7 +48,6 @@ body{
     position: relative;
     justify-content: space-around;
     align-items: center;
-    background-color: white;
     color: black;
     font-family: parisNineteenSeventy;
 }
@@ -58,11 +57,13 @@ body{
     margin: .5rem;
 }
 
-.navbar-links {
+.nav-links {
     display: flex;
     justify-content: space-around;
     height: 100%;
-    width: 50%;
+    width: 170%;
+    position: relative;
+    left: -170px;
 }
 
 .navbar-links ul {
@@ -80,7 +81,7 @@ body{
     text-decoration: none;
     color: black;
     padding: 1rem;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     letter-spacing: 3px;
 }
@@ -124,6 +125,8 @@ body{
 
     .phone-image {
         display: flex;
+        position: relative;
+        top: 235px;
     }
 
     .lscreen {
@@ -133,6 +136,11 @@ body{
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        display: flex;
+        position: relative;
+        color: black;
+        font-family: parisNineteenSeventy;
+        top: -1450px;
     }
 
     .toggle-button {
