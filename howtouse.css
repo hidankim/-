@@ -61,9 +61,9 @@ body{
     display: flex;
     justify-content: space-around;
     height: 100%;
-    width: 170%;
+    width: 130%;
     position: relative;
-    left: -170px;
+    left: -100px;
 }
 
 .navbar-links ul {
