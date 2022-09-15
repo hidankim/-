@@ -27,13 +27,13 @@ body{
 .clublogo{
     position: relative;
     bottom: -50px;
-    left: -120px;
+    left: -220px;
 }
 
 .clubtext{
     position: relative;
     top:-22px;
-    left: -50px;
+    left: -150px;
 }
 
 .logo{
@@ -63,7 +63,7 @@ body{
     height: 100%;
     width: 170%;
     position: relative;
-    left: -200px;
+    left: -170px;
 }
 
 .navbar-links ul {
@@ -76,7 +76,7 @@ body{
     list-style: none;
 }
 
-.navbar-links li a {
+.navbar-links a {
     display: block;
     text-decoration: none;
     color: black;
@@ -86,16 +86,17 @@ body{
     letter-spacing: 3px;
 }
 
-.navbar-links a::after{
+.nav-links a::after{
     content: '';
     width: 0%;
     height: 2px;
     background: #000000;
+    display: block;
     margin: auto;
     transition: 0.5s;
 }
 
-.navbar-links a:hover::after{
+.nav-links a:hover::after{
     width: 100%;
 }
 
@@ -127,26 +128,10 @@ body{
         display: flex;
         position: relative;
         top: 235px;
-        background-position: fixed;
-        background: url(pictures/phone\ background.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
     }
 
     .lscreen {
         display: none;
-    }
-
-    .clublogo{
-        position: relative;
-        left: 30px;
-        top: 10px;
-    }
-    
-    .clubtext{
-        position: relative;
-        left: 90px;
-        top: -60px;
     }
 
     .navbar {
@@ -166,8 +151,6 @@ body{
     .navbar-links {
         display: none;
         width: 100%;
-        position: relative;
-        left: 200px;
     }
 
     .navbar-links ul {
