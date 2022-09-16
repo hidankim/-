@@ -127,6 +127,11 @@ body{
         display: flex;
         position: relative;
         top: 235px;
+        background-position: fixed;
+        background: url(pictures/phone\ background.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 50px;
     }
 
     .lscreen {
@@ -163,6 +168,8 @@ body{
         display: none;
         width: 100%;
         position: relative;
+        left: 200px;
+        top:-30px;
     }
 
     .navbar-links ul {
