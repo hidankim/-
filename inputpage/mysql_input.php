@@ -1,5 +1,5 @@
 <?php 
-$server = "172.16.226.244";
+$server = "localhost";
 $user = "test";
 $port = "3306";
 $password = "1112";
