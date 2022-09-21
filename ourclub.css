@@ -126,7 +126,6 @@ body{
     .phone-image {
         display: flex;
         position: relative;
-        top: 235px;
         background-position: fixed;
         background: url(pictures/phone\ background.png);
         background-repeat: no-repeat;
@@ -157,7 +156,8 @@ body{
         position: relative;
         color: black;
         font-family: parisNineteenSeventy;
-        top: -1800px;
+        top: -1805px;
+        background-color: white;
     }
 
     .toggle-button {
@@ -175,6 +175,10 @@ body{
     .navbar-links ul {
         width: 100%;
         flex-direction: column;
+    }
+
+    .nav-links a:hover::after{
+        width: 0%;
     }
 
     .navbar-links ul li {
