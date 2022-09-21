@@ -127,7 +127,7 @@ body{
     .phone-image {
         display: flex;
         position: relative;
-        top: 235px;
+        top:0px;
         background-position: fixed;
         background: url(pictures/phone\ background.png);
         background-repeat: no-repeat;
