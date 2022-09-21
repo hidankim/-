@@ -165,6 +165,10 @@ body{
         display: flex;
     }
 
+    .nav-links a:hover::after{
+        width: 0%;
+    }
+
     .navbar-links {
         display: none;
         width: 100%;
