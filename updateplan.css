@@ -127,10 +127,6 @@ body{
         display: flex;
         position: relative;
         top:0px;
-        background-position: fixed;
-        background: url(pictures/phone\ background.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
     }
 
     .lscreen {
