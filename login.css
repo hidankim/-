@@ -1,144 +1,439 @@
 body{
-    margin: 0px;
-    padding: 0px;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    height: 100vh;
-    background: url(pictures/lscreen\ main.png);
-    background-size: 100%;
-    background-repeat: no-repeat; 
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  height: 100vh;
 }
 
 @font-face {
-    font-family: 둥근고딕B;
-    src: url(fonts/태-둥근고딕B.otf);
+  font-family: parisNineteenSeventy;
+  src: url(fonts/Chalet-ParisNineteenSeventy_10022.ttf);
 }
 
-@font-face {
-    font-family: 둥근고딕R;
-    src: url(fonts/태-둥근고딕R.otf);
+.lscreen {
+  display: grid;
+  height: 100%;
+  position: absolute;
+  top: 0px;
 }
-
-@font-face {
-    font-family: parisNineteenSeventy;
-    src: url(fonts/Chalet-ParisNineteenSeventy_10022.ttf);
-}
-
-.header{
-    min-height: 100vh;
-    width: 100%;
-    color: white; 
-    background-position: center;
-    background-size: cover;
-    position: fixed;
-}
-
-nav{
-    position: relative;
-    top:-40px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 1vh;
-    font-family: parisNineteenSeventy;
-
+.center-fit {
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
 }
 
 .clublogo{
-    position: relative;
-    bottom:-75px;
-    left: -100px;
+  position: relative;
+  bottom: -50px;
+  left: -120px;
 }
 
 .clubtext{
-    position: relative;
-    top:-42px;
-    left: 30px;
+  position: relative;
+  top:-22px;
+  left: -50px;
 }
 
 .logo{
-    letter-spacing: 5px;
-    font-size: 25px;
-    color: black;
-    font-family: parisNineteenSeventy;
+  letter-spacing: 5px;
+  font-size: 25px;
+  color: black;
+  font-family: parisNineteenSeventy;
 }
 
-
-
-.nav-links{
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    position: relative;
-    left: 100px;
-    top: 35px;
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  font-family: parisNineteenSeventy;
 }
 
-.nav-links li{
-    list-style: none;
-    color: black;
+.brand-title {
+  font-size: 1.5rem;
+  margin: .5rem;
 }
 
-.nav-links a{
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 20px;
-    color: black;
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  width: 130%;
+  position: relative;
+  left: -100px;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
 .nav-links a::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #000000;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #000000;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
 }
 
 .nav-links a:hover::after{
-    width: 100%;
+  width: 100%;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.phone-image {
+  display: none;
 }
 
 
-.text-box{
-    position: absolute;
-    left: 10%;
-    top: 5%;
-    width: 600px;
-    padding: 0px;
-    font-family: parisNineteenSeventy;
+.highschool {
+  margin-top: 100px;
+  padding: 32px;
+  position: fixed;
 }
 
-.text-box h1{
-    font-size: 130px;
-    margin-bottom: 0px;
+.select-box2 {
+  position: relative;
+  top: 170px;
+  left: 420px;
+  display: flex;
+  width: 290px;
+  flex-direction: column;
+  text-align: center;
+  font-size: 25px;
+
 }
 
-.text-box h2{
-    margin: 0px 0 20px;
-    font-size: 30px;
-    position: relative;
-    left: 5%;
+.select-box2 .options-container2 {
+  background: black;
+  color: #f5f6fa;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
 }
 
-.text-box2{
-    position: absolute;
-    bottom: 21%;
-    width: 520px;
-    left: 10%;
-    font-family: parisNineteenSeventy;
-    font-size: 20px;
+.selected2 {
+  background: black;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #f5f6fa;
+  position: relative;
+  border-radius: 40px;
+
+  order: 0;
+}
+
+.selected2::after {
+  content: "";
+  background: url("img/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+
+  transition: all 0.4s;
+}
+
+.select-box2 .options-container2.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+  border-radius: 25px;
+}
+
+.select-box2 .options-container2.active + .selected2::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box2 .options-container2::-webkit-scrollbar {
+  width: 8px;
+  background: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box2 .options-container2::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box2 .option2,
+.selected2 {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.select-box2 .option2:hover {
+  background: black;
+}
+
+.select-box2 label {
+  cursor: pointer;
+}
+
+.select-box2 .option2 .radio {
+  display: none;
+}
+
+
+
+.middleschool {
+  margin-top: 100px;
+  padding: 32px;
+  position: fixed;
+}
+
+.select-box {
+  position: relative;
+  top: 170px;
+  left: 100px;
+  display: flex;
+  width: 290px;
+  flex-direction: column;
+  text-align: center;
+  font-size: 25px;
+}
+
+.select-box .options-container {
+  background: black;
+  color: #f5f6fa;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected {
+  background: black;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #f5f6fa;
+  position: relative;
+  border-radius: 40px;
+  order: 0;
+}
+
+.selected::after {
+  content: "";
+  background: url("img/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+  border-radius: 25px;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: black;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
 }
 
 
 
 
+
+
+/* unvisited link */
+.classLink:link {
+  color: #fff;
+}
+
+/* visited link */
+.classLink:visited {
+  color: #fff;
+}
+
+/* mouse over link */
+.classLink:hover {
+  color: #fff;
+}
+
+/* selected link */
+.classLink:active {
+  color: #fff;
+}
+
+.classLink:link {
+  text-decoration: none;
+}
+
+.classLink:visited {
+  text-decoration: none;
+}
+
+.classLink:hover {
+  text-decoration: none;
+}
+
+.classLink:active {
+  text-decoration: none;
+}
+
+
+@media (max-width: 800px) {
+
+  .phone-image {
+      display: flex;
+      position: relative;
+      top:0px;
+      background-position: fixed;
+      background: url(pictures/phone\ background.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+  }
+
+  .lscreen {
+      display: none;
+  }
+
+  .clublogo{
+      position: relative;
+      left: 30px;
+      top: 10px;
+  }
+  
+  .clubtext{
+      position: relative;
+      left: 90px;
+      top: -60px;
+  }
+
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      display: flex;
+      position: relative;
+      color: black;
+      font-family: parisNineteenSeventy;
+      top: -1200px;
+      background-color: white;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .nav-links a:hover::after{
+      width: 0%;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+      position: relative;
+      left: 125px;
+      top: -30px;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+
+  
 .highschool {
     margin-top: 100px;
     padding: 32px;
@@ -146,11 +441,11 @@ nav{
   }
   
   .select-box2 {
-    position: absolute;
-    top: 370px;
-    left: 490px;
+    position: relative;
+    top: 170px;
+    left: 420px;
     display: flex;
-    width: 300px;
+    width: 290px;
     flex-direction: column;
     text-align: center;
     font-size: 25px;
@@ -246,11 +541,11 @@ nav{
   }
   
   .select-box {
-    position: absolute;
-    top: 370px;
-    left: 140px;
+    position: relative;
+    top: 170px;
+    left: 100px;
     display: flex;
-    width: 300px;
+    width: 290px;
     flex-direction: column;
     text-align: center;
     font-size: 25px;
@@ -376,23 +671,9 @@ nav{
     text-decoration: none;
   }
 
-h4 {
-    position: relative;
-    top: 60px;
-    font-size: 20px;
-    left: -75px;
 }
 
-.backimg {
-    position: absolute;
-    left: 50%;
-}
 
-.main img{
-    position: relative;
-    left: 700px;
-    top: -850px;
-}
 
 
 
