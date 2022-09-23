@@ -32,10 +32,10 @@ async function fetchPage(){
   document.getElementById("submitBtn").setAttribute("disabled", "disabled");
   startLoading();
   var today = new Date();
-  var sub = today.getFullYear()+"-"+(today.getMonth()+1)+"-"+today.getDate();
+  var sub = today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate()-1);
   var submitValue = ["> \""+sub+"\"", link, "./json"];
 
-  await fetch("./mysql_output.php", {
+  await fetch("./mysql_output.php?ver=2", {
     method:"post",
     headers:{"Content-Type":"application/json; charset=UTF-8"},
     body:JSON.stringify(submitValue)
@@ -52,17 +52,19 @@ async function fetchPage(){
     return res;
   }));
 
-  let value = "<table border=\"1\"><th>제목</th><th>내용</th><th>과목</th><th>날짜</th><th>교시</th><th>삭제</th>";
+  let value = "<table border=\"0\"><th class=\"mleft\">#</th><th>과목</th><th>날짜</th><th>시간</th><th>제목</th><th>내용</th><th class=\"mright\">삭제</th>";
   for(var i = 0 ; i < text.length ; i++)
   {
-    value += "<tr>";
+    value += "<tr><td class=\"table_index\">"+(i+1)+"</td>";
+    var index = 0;
     for(var j in text[i])
     {
       if(j !== "id"){
-        value += "<td>"+text[i][j]+"</td>";
+        value += "<td class=\"td"+index+"\">"+text[i][j]+"</td>";
       }
+      index++;
     }
-    value += "<td><button class=\"deleteBtn\" id=\""+text[i]["id"]+"\" onclick=\"deleteInfo(this.id)\"> X </button></td></tr>";
+    value += "<td class=\"td"+(--index)+"\"><button class=\"deleteBtn\" id=\""+text[i]["id"]+"\" onclick=\"deleteInfo(this.id)\"> X </button></td></tr>";
   }
   value += "</table>";
 
