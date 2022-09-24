@@ -65,7 +65,7 @@ html, body{
   margin: 0 0 10px 0;
 }
 .input-box{
-  width: 50%;
+  width: 100%;
   margin-right: 20px;
   height: auto;
   background: #ffffff;
@@ -153,11 +153,15 @@ html, body{
     background: #ffffff;
   }
   .content-wrap{
-    width: 1200px;
-    height: 800px;
+    width: 1170px;
+    height: 850px;
     margin:0 auto;
     border: 4px solid black;
     border-radius: 20px;
+    position: absolute;
+    left: 30px;
+    top: 110px;
+
 
     background: #ffffff;
   }
@@ -165,9 +169,11 @@ html, body{
     background: #ffffff;
     color: black;
     float: left;
-    width: 480px;
+    width: 570px;
     height: 750px;
     padding-right: 100px;
+    position: absolute;
+    left: 1230px;
   }
   .main-wrap{
     text-align: center;
@@ -269,6 +275,13 @@ html, body{
     border-width: 2px;
     color: #0b0809;
     border-color: black;
+  }
+
+  .buttons {
+    position: absolute;
+    top: 425px;
+    left: 1730px;
+    width: 5%;
   }
 }
 
