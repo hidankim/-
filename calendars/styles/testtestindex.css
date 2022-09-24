@@ -1,0 +1,181 @@
+html{
+	height: 700px;
+	width: 97%;
+	margin: 10px;
+}
+body{
+	height: 100%;
+	margin: 0;
+}
+.main{
+	height: 100%;
+	margin: 0;
+	display: grid;
+	grid-template-rows: 1fr 10fr;
+}
+img{
+	width: 40px;
+	margin: 10px;
+}
+#number-img{
+	display: grid;
+	grid-template-columns: 15% 15%;
+	column-gap: 20px;
+}
+#class-number{
+	font-size: 250%;
+	text-align: right;
+}
+#contents{
+	display: grid;
+	grid-template-columns: 1.75fr 1fr;
+	grid-template-rows: 1fr;
+	justify-content: center;
+	column-gap: 5%;
+	height: 95%;
+	width: 100%;
+	font-weight: bold;
+}
+.content-wrap{
+	border: 5px solid black;
+	border-top-left-radius: 5%;
+	border-bottom-left-radius: 5%;
+	width: 100%;
+	max-height: 650px;
+	margin: 0;
+	overflow-x: auto;
+	overflow-y: auto;
+	margin-left: 5%;
+}
+.content-wrap::-webkit-scrollbar {
+    width: 10px;
+}
+.content-wrap::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+.content-wrap::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 5px black;
+}
+.content-left{
+	max-height: 630px;
+	width: 90%;
+	display: grid;
+	grid-template-rows: 1fr 1.4fr;
+}
+.todo-wrap::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.todo-wrap::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+.todo-wrap::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 5px black;
+}
+.main-wrap{
+	display: grid;
+	grid-template-rows: 1fr 3fr 1fr 0.3fr;
+	text-align: center;
+	font-weight: bold;
+	row-gap: 10px;
+	height: 40%;
+}
+#main-day{
+	font-size: 150%;
+}
+#main-date{
+	font-size: 500%;
+}
+#main-week{
+	font-size: 130%;
+}
+#submitBtn{
+	width: 20%;
+	height: 125%;
+	margin: auto;
+	position: relative;
+	top: 10px;
+	color: white;
+	background-color: black;
+	border: 2px solid black;
+	border-radius: 15%;
+}
+#submitBtn:hover{
+	color: black;
+	background-color: darkgray;
+	outline: 2px solid black;
+}
+#calendar-body td{
+	height: 100px;
+	min-width: 100px;
+	text-align: center;
+	vertical-align: top;
+}
+.todo-wrap{
+	border: 5px solid black;
+	border-bottom-right-radius: 5%;
+	overflow: auto;
+	height: 95%;
+	width: 100%;
+}
+#next{
+	position: relative;
+	left: 85%;
+}
+.active{
+	outline: 3px solid black;
+}
+.btn-wrap{
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+#thead{
+	font-size: 120%;
+	height: 100%;
+}
+.todo-wrap table{
+	border-collapse: collapse;
+	text-align: center;
+	margin: 5px;
+	width: 100%;
+	white-space: nowrap;
+}
+.todo-wrap th{
+	border-bottom: 2px solid black;
+	height: 20px;
+}
+.todo-wrap tr{
+	border-bottom: 2px solid black;
+}
+td.table_index{
+	min-width: 50px;
+	height: 40px;
+}
+td.td0{
+	min-width: 100px;
+}
+td.td1{
+	min-width: 100px;
+}
+td.td2{
+	min-width: 80px;
+}
+td.td3{
+	min-width: 150px;
+}
+td.td4{
+	min-width: 200px;
+}
+td.td5{
+	min-width: 100px;
+}
