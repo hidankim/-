@@ -31,6 +31,10 @@ function stopLoading()
 async function fetchPage(){
   document.getElementById("submitBtn").setAttribute("disabled", "disabled");
   startLoading();
+  let input = document.getElementsByClassName("question");
+  for(var i = 0 ; i < input.length ; i++){
+    input.item(i).value = null;
+  }
   var today = new Date();
   var sub = today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate()-1);
   var submitValue = ["> \""+sub+"\"", link, "./json"];
@@ -52,7 +56,7 @@ async function fetchPage(){
     return res;
   }));
 
-  let value = "<table border=\"0\"><th class=\"mleft\">#</th><th>과목</th><th>날짜</th><th>시간</th><th>제목</th><th>내용</th><th class=\"mright\">삭제</th>";
+  let value = "<table border=\"0\"><tr id=\"firstTr\"><th class=\"mleft\">#</th><th>과목</th><th>날짜</th><th>시간</th><th>제목</th><th>내용</th><th class=\"mright\">삭제</th></tr>";
   for(var i = 0 ; i < text.length ; i++)
   {
     value += "<tr><td class=\"table_index\">"+(i+1)+"</td>";

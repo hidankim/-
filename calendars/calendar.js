@@ -13,7 +13,6 @@ var mainTodayDate = document.getElementById('main-date');
 var mainNowweek = document.getElementById('main-week')
 let link = document.location.href.split("?")[1];
 link = link.substr(0, 2)+" "+link.substr(5);
-console.log(link);
 
 (function()
 {
@@ -93,7 +92,7 @@ async function applyInfo()
             }
             if(instInfo == i){
                 var $li = document.createElement("li");
-                $li.textContent = info[valCnt]["title"].substring(0, 3)+"...";
+                $li.textContent = info[valCnt]["subject"].substring(0, 3)+"...";
                 $ol.appendChild($li);
                 valCnt++;
             }
@@ -110,7 +109,7 @@ async function applyInfo()
 
 async function fetchDate(info)
 {
-    await fetch("../inputpage/mysql_output.php?ver=2", {
+    await fetch("../inputpage/mysql_output.php?ver=3", {
         method:"post",
         headers:{"Content-Type":"application/json; charset=UTF-8"},
         body:JSON.stringify(info)
@@ -196,7 +195,6 @@ function prev(){
     clickedDate1 = document.getElementById(today.getDate());
     clickedDate1.classList.add('active');
     clickStart();
-    reshowingList();
 }
 
 function next(){
@@ -228,7 +226,6 @@ function next(){
     clickedDate1 = document.getElementById(today.getDate());
     clickedDate1.classList.add('active');
     clickStart();
-    reshowingList();
 }
 
 currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;' + first.getFullYear();
@@ -264,7 +261,6 @@ function changeToday(e){
     today = new Date(today.getFullYear(), today.getMonth(), clickedDate1.id);
     showMain();
     keyValue = today.getFullYear() + '' + today.getMonth()+ '' + today.getDate();
-    reshowingList();
 }
 clickStart();
 
@@ -297,17 +293,19 @@ async function fetchPage(){
     return res;
     }));
 
-    let value = "<table border=\"1\"><th>제목</th><th>내용</th><th>과목</th><th>날짜</th><th>교시</th>";
+    let value = "<table><tr id=\"firstTr\"><th class=\"mleft\">#</th><th>과목</th><th>날짜</th><th>시간</th><th>제목</th><th class=\"mright\">내용</th></tr>";
     for(var i = 0 ; i < text.length ; i++)
     {
-    value += "<tr>";
-    for(var j in text[i])
-    {
-        if(j !== "id"){
-        value += "<td>"+text[i][j]+"</td>";
+        value += "<tr><td class=\"table_index\">"+(i+1)+"</td>";
+        var count = 0;
+        for(var j in text[i])
+        {
+            if(j !== "id"){
+                value += "<td class=\"td"+count+"\">"+text[i][j]+"</td>";
+                count++;
+            }
         }
-    }
-    value += "</tr>";
+        value += "</tr>";
     }
     value += "</table>";
 

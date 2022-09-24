@@ -31,6 +31,9 @@ tr{
 	border-bottom: 2px solid black;
 	height: 50px;
 }
+tr#firstTr{
+	border: none;
+}
 td.table_index{
 	width: 50px;
 }

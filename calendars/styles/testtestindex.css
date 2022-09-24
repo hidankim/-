@@ -127,6 +127,8 @@ img{
 	overflow: auto;
 	height: 95%;
 	width: 100%;
+	position: relative;
+	bottom: 7px;
 }
 #next{
 	position: relative;
@@ -178,4 +180,24 @@ td.td4{
 }
 td.td5{
 	min-width: 100px;
+}
+th{
+	background: black;
+	color: white;
+}
+th.mleft{
+	border-left: 1px lightskyblue;
+	border-top-left-radius: 15%;
+	border-bottom-left-radius: 15%;
+}
+th.mright{
+	border-right: 1px lightskyblue;
+	border-top-right-radius: 15%;
+	border-bottom-right-radius: 15%;
+}
+tr#firstTr{
+	border: none;
+}
+#firstTr th{
+	border: none;
 }
