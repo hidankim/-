@@ -51,13 +51,13 @@ img{
     width: 10px;
 }
 .content-wrap::-webkit-scrollbar-thumb {
-    background-color: white;
+    background-color: gray;
     border-radius: 10px;
     background-clip: padding-box;
     border: 2px solid transparent;
 }
 .content-wrap::-webkit-scrollbar-track {
-    background-color: grey;
+    background-color: white;
     border-radius: 15px;
     box-shadow: inset 0px 0px 5px black;
 }
@@ -72,13 +72,13 @@ img{
     height: 10px;
 }
 .todo-wrap::-webkit-scrollbar-thumb {
-    background-color: white;
+    background-color: gray;
     border-radius: 10px;
     background-clip: padding-box;
     border: 2px solid transparent;
 }
 .todo-wrap::-webkit-scrollbar-track {
-    background-color: grey;
+    background-color: white;
     border-radius: 15px;
     box-shadow: inset 0px 0px 5px black;
 }
