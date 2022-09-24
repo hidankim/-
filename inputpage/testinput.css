@@ -1,9 +1,7 @@
 html{
-	height: 92%;
-	margin-top: 1.5%;
+	height: 700px;
 }
 body{
-	margin: 1%;
 	height: 90%;
 }
 img{
@@ -14,7 +12,6 @@ table{
 	margin: 20px;
 	border-collapse: collapse;
 	text-align: center;
-	white-space: nowrap;
 }
 th{
 	background: black;
@@ -58,7 +55,7 @@ td.td5{
 .deleteBtn{
 	color: white;
 	background-color: black;
-	border: 1px black;
+	border: 2px black;
 	border-radius: 25%;
 	width: 60%;
 	height: 100%;
@@ -66,6 +63,7 @@ td.td5{
 .deleteBtn:hover{
 	color: black;
 	background-color: darkgray;
+	outline: 2px solid black;
 }
 .main{
 	height: 90%;
@@ -73,10 +71,12 @@ td.td5{
 .contents{
 	display: grid;
 	grid-template-columns: 2fr 1fr;
+	height: 100%;
+	margin-top: 1%;
 }
 .content-wrap{
 	width: 95%;
-	height: 90%;
+	height: 100%;
 	border: 10px solid black;
 	border-top-left-radius: 5%;
 	border-bottom-left-radius: 5%;
@@ -90,7 +90,6 @@ td.td5{
 }
 .content-wrap::-webkit-scrollbar {
     width: 10px;
-    height: 50px;
 }
 .content-wrap::-webkit-scrollbar-thumb {
     background-color: white;
@@ -105,7 +104,7 @@ td.td5{
 }
 .content-left{
 	width: 95%;
-	height: 90%;
+	height: 100%;
 	border: 10px solid black;
 	border-top-right-radius: 5%;
 	border-bottom-right-radius: 5%;
