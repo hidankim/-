@@ -376,6 +376,18 @@ body{
       display: none;
   }
 
+  .highschool {
+    position: absolute;
+    top: 100px;
+    right: 550px;
+  }
+
+  .middleschool {
+    position: absolute;
+    top: 200px;
+    right: 230px;
+  }
+
   .clublogo{
       position: relative;
       left: 30px;
