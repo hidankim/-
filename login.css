@@ -449,7 +449,7 @@ body{
 .highschool {
     margin-top: 100px;
     padding: 32px;
-    position: fixed;
+    position: absolute;
   }
   
   .select-box2 {
@@ -549,7 +549,7 @@ body{
   .middleschool {
     margin-top: 100px;
     padding: 32px;
-    position: fixed;
+    position: absolute;
   }
   
   .select-box {
