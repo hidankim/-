@@ -202,15 +202,17 @@ tr#firstTr{
 	border: none;
 }
 
-@media (max-width: 2560px) and (min-width: 2500px){
+/*macbook pro 14 inch 2022*/
+@media (min-width: 1300px) and (max-width: 1600px){
 	.main{
-		height: 500%;
+		height: 200%;
 		margin: 0;
 		display: grid;
 		grid-template-rows: 1fr 10fr;
 	}
 }
 
+/*lg gram 16 inch 2021 */
 @media (max-width: px) and (min-width: 500px){
 	.main{
 		height: 500%;
