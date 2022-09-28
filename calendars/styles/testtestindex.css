@@ -213,11 +213,26 @@ tr#firstTr{
 }
 
 /*lg gram 16 inch 2021 */
-@media (max-width: px) and (min-width: 500px){
+@media (min-width: 1601px) and (max-width: 2000px){
 	.main{
-		height: 500%;
+		height: 290%;
 		margin: 0;
 		display: grid;
 		grid-template-rows: 1fr 10fr;
+	}
+
+	.class-number{
+		font-size: 250%;
+		text-align: right;
+		position: absolute;
+		top: 130px;
+		left: 110px;
+	}
+	img{
+		width: 40px;
+		margin: 10px;
+		position: absolute;
+		top: 130px;
+		left: 250px;
 	}
 }
