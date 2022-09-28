@@ -203,17 +203,31 @@ tr#firstTr{
 }
 
 /*macbook pro 14 inch 2022*/
-@media (min-width: 800px) and (max-width: 1600px){
+@media (min-width: 800px) and (max-width: 1800px){
 	.main{
 		height: 200%;
 		margin: 0;
 		display: grid;
 		grid-template-rows: 1fr 10fr;
 	}
+	.class-number{
+		font-size: 250%;
+		text-align: right;
+		position: absolute;
+		top: 80px;
+		left: 110px;
+	}
+	img{
+		width: 40px;
+		margin: 10px;
+		position: absolute;
+		top: 70px;
+		left: 260px;
+	}
 }
 
 /*lg gram 16 inch 2021 */
-@media (min-width: 1601px) and (max-width: 2000px){
+@media (min-width: 1801px) and (max-width: 2000px){
 	.main{
 		height: 290%;
 		margin: 0;
