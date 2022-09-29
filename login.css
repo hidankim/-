@@ -455,12 +455,12 @@ body{
   .select-box2 {
     position: relative;
     top: 170px;
-    left: 420px;
+    left: 350px;
     display: flex;
-    width: 290px;
+    width: 200px;
     flex-direction: column;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
 
   }
   
@@ -555,12 +555,12 @@ body{
   .select-box {
     position: relative;
     top: 170px;
-    left: 100px;
+    left: 30px;
     display: flex;
-    width: 290px;
+    width: 200px;
     flex-direction: column;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
   }
   
   .select-box .options-container {
