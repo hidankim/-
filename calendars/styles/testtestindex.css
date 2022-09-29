@@ -203,7 +203,30 @@ tr#firstTr{
 }
 
 /*macbook pro 14 inch 2022*/
-@media (min-width: 900px) and (max-width: 1800px){
+@media (min-width: 800px) and (max-width: 1600px){
+	.main{
+		height: 105%;
+		margin: 0;
+		display: grid;
+		grid-template-rows: 1fr 10fr;
+	}
+	.class-number{
+		font-size: 250%;
+		text-align: right;
+		position: absolute;
+		top: 10px;
+		left: 90px;
+	}
+	img{
+		width: 40px;
+		margin: 10px;
+		position: absolute;
+		top: 10px;
+		left: 260px;
+	}
+}
+
+@media (min-width: 1601px) and (max-width: 1800px){
 	.main{
 		height: 200%;
 		margin: 0;
