@@ -378,13 +378,13 @@ body{
 
   .highschool {
     position: absolute;
-    top: 100px;
+    top: -50px;
     right: 485px;
   }
 
   .middleschool {
     position: absolute;
-    top: 200px;
+    top: 50px;
     right: 165px;
   }
 
