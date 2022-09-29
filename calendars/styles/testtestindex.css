@@ -285,4 +285,48 @@ tr#firstTr{
 		width: 100%;
 		font-weight: bold;
 	}
+	.class-number{
+		font-size: 250%;
+		text-align: right;
+		position: absolute;
+		top: 15px;
+		left: 20px;
+	}
+	img{
+		position: absolute;
+		top: 12px;
+		left: 320px;
+	}
+	.main{
+		height: 120%;
+		margin: 0;
+		display: grid;
+		grid-template-rows: 1fr 10fr;
+	}
+	.content-left{
+		max-height: 630px;
+		width: 90%;
+		display: grid;
+		grid-template-rows: 1fr 1.4fr;
+		position: absolute;
+		top: 600px;
+	}
+	.content-wrap{
+		border: 5px solid black;
+		border-top-left-radius: 5%;
+		border-bottom-left-radius: 5%;
+		width: 150%;
+		max-height: 650px;
+		margin: 0;
+		overflow-x: auto;
+		overflow-y: auto;
+		margin-left: 5%;
+	}
+	#calendar-body td{
+		height: 100px;
+		min-width: 8px;
+		text-align: center;
+		vertical-align: top;
+	}
+	
 }
