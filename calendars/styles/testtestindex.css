@@ -312,7 +312,7 @@ tr#firstTr{
 		top: 700px;
 	}
 	.content-wrap{
-		border: 5px solid black;
+		border: 5px solid white;
 		border-top-left-radius: 5%;
 		border-bottom-left-radius: 5%;
 		width: 150%;
@@ -356,5 +356,18 @@ tr#firstTr{
 		border: 2px solid black;
 		border-radius: 15%;
 	}
+	.content-wrap::-webkit-scrollbar-thumb {
+		background-color: white;
+		border-radius: 10px;
+		background-clip: padding-box;
+		border: 2px solid transparent;
+	}
+	.content-wrap::-webkit-scrollbar-track {
+		background-color: white;
+		border-radius: 15px;
+		box-shadow: inset 0px 0px 5px black;
+	}
+	
+	
 	
 }
