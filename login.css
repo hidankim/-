@@ -129,9 +129,9 @@ body{
 }
 
 .select-box2 {
-  position: relative;
-  top: 170px;
-  left: 420px;
+  position: absolute;
+  top: 200px;
+  left: 450px;
   display: flex;
   width: 290px;
   flex-direction: column;
@@ -229,9 +229,9 @@ body{
 }
 
 .select-box {
-  position: relative;
-  top: 170px;
-  left: 100px;
+  position: absolute;
+  top: 200px;
+  left: 120px;
   display: flex;
   width: 290px;
   flex-direction: column;
@@ -561,6 +561,7 @@ body{
     flex-direction: column;
     text-align: center;
     font-size: 20px;
+    height: 1%;
   }
   
   .select-box .options-container {
