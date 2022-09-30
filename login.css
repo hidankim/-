@@ -360,7 +360,7 @@ body{
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
 
   .phone-image {
       display: flex;
@@ -561,7 +561,6 @@ body{
     flex-direction: column;
     text-align: center;
     font-size: 20px;
-    height: 1%;
   }
   
   .select-box .options-container {
@@ -642,6 +641,12 @@ body{
   .select-box .option .radio {
     display: none;
   }
+  .select-box .option,
+  .selected {
+    height: 20px;
+    padding: 12px 24px;
+    cursor: pointer;
+}
 
 
   
@@ -683,6 +688,331 @@ body{
   .classLink:active {
     text-decoration: none;
   }
+
+}
+
+
+@media (min-width: 750px) and (max-width: 950px){
+  .phone-image {
+    display: flex;
+    position: relative;
+    top:0px;
+    background-position: fixed;
+    background: url(pictures/phone\ background.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.lscreen {
+    display: none;
+}
+
+.highschool {
+  position: absolute;
+  top: -50px;
+  right: 485px;
+}
+
+.middleschool {
+  position: absolute;
+  top: 50px;
+  right: 165px;
+}
+
+.clublogo{
+    position: relative;
+    left: 30px;
+    top: 10px;
+}
+
+.clubtext{
+    position: relative;
+    left: 90px;
+    top: -60px;
+}
+
+.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    position: relative;
+    color: black;
+    font-family: parisNineteenSeventy;
+    top: -1200px;
+    background-color: white;
+}
+
+.toggle-button {
+    display: flex;
+}
+
+.nav-links a:hover::after{
+    width: 0%;
+}
+
+.navbar-links {
+    display: none;
+    width: 100%;
+    position: relative;
+    left: 125px;
+    top: -30px;
+}
+
+.navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+}
+
+.navbar-links ul li {
+    text-align: center;
+}
+
+.navbar-links ul li a {
+    padding: .5rem 1rem;
+}
+
+.navbar-links.active {
+    display: flex;
+}
+
+
+
+.highschool {
+  margin-top: 100px;
+  padding: 32px;
+  position: absolute;
+}
+
+.select-box2 {
+  position: absolute;
+  top: 350px;
+  left: 50px;
+  display: flex;
+  width: 220px;
+  flex-direction: column;
+  text-align: center;
+  font-size: 23px;
+
+}
+
+.select-box2 .options-container2 {
+  background: black;
+  color: #f5f6fa;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected2 {
+  background: black;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #f5f6fa;
+  position: relative;
+  border-radius: 40px;
+
+  order: 0;
+}
+
+.selected2::after {
+  content: "";
+  background: url("img/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+
+  transition: all 0.4s;
+}
+
+.select-box2 .options-container2.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+  border-radius: 25px;
+}
+
+.select-box2 .options-container2.active + .selected2::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box2 .options-container2::-webkit-scrollbar {
+  width: 8px;
+  background: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box2 .options-container2::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box2 .option2,
+.selected2 {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.select-box2 .option2:hover {
+  background: black;
+}
+
+.select-box2 label {
+  cursor: pointer;
+}
+
+.select-box2 .option2 .radio {
+  display: none;
+}
+
+
+
+.middleschool {
+  margin-top: 100px;
+  padding: 32px;
+  position: absolute;
+}
+
+.select-box {
+  position: absolute;
+  top: 250px;
+  left: -520px;
+  display: flex;
+  width: 220px;
+  flex-direction: column;
+  text-align: center;
+  font-size: 23px;
+}
+
+.select-box .options-container {
+  background: black;
+  color: #f5f6fa;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected {
+  background: black;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #f5f6fa;
+  position: relative;
+  border-radius: 40px;
+  order: 0;
+}
+
+.selected::after {
+  content: "";
+  background: url("img/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+  border-radius: 25px;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: black;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+
+
+
+
+
+/* unvisited link */
+.classLink:link {
+  color: #fff;
+}
+
+/* visited link */
+.classLink:visited {
+  color: #fff;
+}
+
+/* mouse over link */
+.classLink:hover {
+  color: #fff;
+}
+
+/* selected link */
+.classLink:active {
+  color: #fff;
+}
+
+.classLink:link {
+  text-decoration: none;
+}
+
+.classLink:visited {
+  text-decoration: none;
+}
+
+.classLink:hover {
+  text-decoration: none;
+}
+
+.classLink:active {
+  text-decoration: none;
+}
 
 }
 
