@@ -81,7 +81,7 @@ async function applyInfo()
     let valCnt = 0;
     for(var i = 1 ; i <= pageYear[first.getMonth()] ; i++)
     {
-        var $ol = document.createElement("ol");
+        var $div = document.createElement("div");
         while(info[valCnt])
         {
             var inst = info[valCnt]["datetime"];
@@ -92,8 +92,9 @@ async function applyInfo()
             }
             if(instInfo == i){
                 var $li = document.createElement("li");
-                $li.textContent = info[valCnt]["subject"].substring(0, 3)+"...";
-                $ol.appendChild($li);
+                $li.classList.add("smallInfo");
+                $li.textContent = info[valCnt]["subject"].substring(0, 3);
+                $div.appendChild($li);
                 valCnt++;
             }
             else
@@ -101,7 +102,7 @@ async function applyInfo()
                 break;
             }
         }
-        document.getElementById(i).appendChild($ol);
+        document.getElementById(i).appendChild($div);
     }
 
     stopLoading();

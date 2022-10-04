@@ -201,6 +201,18 @@ tr#firstTr{
 #firstTr th{
 	border: none;
 }
+.smallInfo{
+	background-color: rgba(140 213 213 0);
+	border: 1px solid rgba(140 213 213 0);
+	border-radius: 2px;
+	width: 85px;
+	height: 20px;
+	margin: auto;
+	margin-top: 3px;
+}
+li.smallInfo{
+	list-style: none;
+}
 
 /*macbook pro 14 inch 2022*/
 @media (min-width: 900px) and (max-width: 1600px){
