@@ -202,10 +202,10 @@ tr#firstTr{
 	border: none;
 }
 .smallInfo{
-	background-color: rgba(140 213 213 0);
-	border: 1px solid rgba(140 213 213 0);
+	background-color: rgba(140, 213, 213, 0.5);
+	border: 1px solid rgba(37, 69, 248, 1);
 	border-radius: 2px;
-	width: 85px;
+	width: 92px;
 	height: 20px;
 	margin: auto;
 	margin-top: 3px;
