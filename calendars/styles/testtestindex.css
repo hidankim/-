@@ -69,7 +69,7 @@ img{
 }
 .todo-wrap::-webkit-scrollbar {
     width: 10px;
-    height: 10px;
+	scrollbar-width: none;
 }
 .todo-wrap::-webkit-scrollbar-thumb {
     background-color: black;
@@ -209,9 +209,14 @@ tr#firstTr{
 	height: 20px;
 	margin: auto;
 	margin-top: 3px;
+	text-align: center;
 }
 li.smallInfo{
 	list-style: none;
+}
+#calendar{
+	margin:0;
+	width:90%;
 }
 
 /*macbook pro 14 inch 2022*/
@@ -297,8 +302,15 @@ li.smallInfo{
 		width: 100%;
 		font-weight: bold;
 	}
+	.smallInfo{
+		width: 30px;
+		font-size: 10px;
+		margin: auto;
+		margin-top: 3px;
+		text-align: center;
+	}
 	.class-number{
-		font-size: 250%;
+		font-size: 200%;
 		text-align: right;
 		position: absolute;
 		top: 15px;
@@ -307,7 +319,7 @@ li.smallInfo{
 	img{
 		position: absolute;
 		top: 12px;
-		left: 320px;
+		left: 250px;
 	}
 	.main{
 		height: 120%;
@@ -321,7 +333,7 @@ li.smallInfo{
 		display: grid;
 		grid-template-rows: 1fr 1.4fr;
 		position: absolute;
-		top: 700px;
+		top: 600px;
 	}
 	.content-wrap{
 		border: 5px solid white;
@@ -335,8 +347,8 @@ li.smallInfo{
 		margin-left: 5%;
 	}
 	#calendar-body td{
-		height: 100px;
-		min-width: 8px;
+		height: 70px;
+		min-width: 30px;
 		text-align: center;
 		vertical-align: top;
 	}
@@ -357,12 +369,12 @@ li.smallInfo{
 		display: none;
 	}
 	#submitBtn{
-		width: 23%;
+		width: 26%;
 		height: 125%;
 		margin: auto;
 		position: relative;
 		top: 105px;
-		left: -40px;
+		left: 0px;
 		color: white;
 		background-color: black;
 		border: 2px solid black;
@@ -380,8 +392,8 @@ li.smallInfo{
 		border-radius: 15px;
 		box-shadow: inset 0px 0px 5px black;
 	}
-	.content-wrap{
-		overflow-x: hidden;
+	#thead{
+		font-size: 100%;
 	}
 	
 	
