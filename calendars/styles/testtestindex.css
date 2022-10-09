@@ -202,8 +202,8 @@ tr#firstTr{
 	border: none;
 }
 .smallInfo{
-	background-color: rgba(140, 213, 213, 0.5);
-	border: 1px solid rgba(37, 69, 248, 1);
+	background-color: #E6E6FA;
+	border: 1px solid #E6E6FA;
 	border-radius: 2px;
 	width: 92px;
 	height: 20px;
@@ -303,11 +303,16 @@ li.smallInfo{
 		font-weight: bold;
 	}
 	.smallInfo{
+		background-color: #FFA07A;
+		border: 1px solid #FFA07A;
+		border-radius: 2px;
+		height: 15px;
 		width: 30px;
 		font-size: 10px;
 		margin: auto;
 		margin-top: 3px;
 		text-align: center;
+		color: black
 	}
 	.class-number{
 		font-size: 200%;
