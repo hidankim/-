@@ -268,7 +268,6 @@ clickStart();
 async function fetchPage(){
     document.getElementById("submitBtn").setAttribute("disabled", "disabled");
     startLoading();
-
     let a = document.getElementById("current-year-month").innerHTML.replaceAll("&nbsp;", "");
     let year = a.slice(-4);
     let month = a.slice(0, -4);
@@ -283,15 +282,28 @@ async function fetchPage(){
     body:JSON.stringify(submitValue)
     });
 
-    var text = await fetch("../inputpage/json?ver=2").then(res => res.text().then(res => {
-    res = JSON.parse(res);
-
-    for(var i = 0 ; i < res.length ; i++)
-    {
-        res[i] = JSON.parse(res[i]);
+    if(window.innerWidth > 900){
+        await fetchPage01();
+    }
+    else{
+        fetchPage02();
     }
 
-    return res;
+    stopLoading();
+    document.getElementById("submitBtn").removeAttribute("disabled");
+}
+
+async function fetchPage01()
+{
+    var text = await fetch("../inputpage/json?ver=2").then(res => res.text().then(res => {
+        res = JSON.parse(res);
+
+        for(var i = 0 ; i < res.length ; i++)
+        {
+            res[i] = JSON.parse(res[i]);
+        }
+
+        return res;
     }));
 
     let value = "<table><tr id=\"firstTr\"><th class=\"mleft\">#</th><th>과목</th><th>날짜</th><th>시간</th><th>제목</th><th class=\"mright\">내용</th></tr>";
@@ -311,9 +323,11 @@ async function fetchPage(){
     value += "</table>";
 
     document.getElementById("todo-list").innerHTML = value;
+}
 
-    stopLoading();
-    document.getElementById("submitBtn").removeAttribute("disabled");
+function fetchPage02()
+{
+    window.open("./newTab.html");
 }
 
 function distinguishMonth(cse)
