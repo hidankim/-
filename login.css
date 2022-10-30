@@ -15,7 +15,7 @@ body{
   display: grid;
   height: 100%;
   position: absolute;
-  top: 0px;
+  top: 85px;
 }
 .center-fit {
   max-width: 100%;
@@ -125,11 +125,13 @@ body{
 .highschool {
   margin-top: 100px;
   padding: 32px;
-  position: fixed;
+  left: 27%;
+  top: 36.8%;
+  position: unset;
 }
 
 .select-box2 {
-  position: absolute;
+  position: sticky;
   top: 200px;
   left: 450px;
   display: flex;
@@ -224,8 +226,7 @@ body{
 
 .middleschool {
   margin-top: 100px;
-  padding: 32px;
-  position: fixed;
+  position: absolute;
 }
 
 .select-box {
@@ -365,11 +366,11 @@ body{
   .phone-image {
       display: flex;
       position: relative;
-      top:0px;
       background-position: fixed;
       background: url(pictures/phone\ background.png);
       background-repeat: no-repeat;
       background-size: 100%;
+      background-position-y: 50px;
   }
 
   .lscreen {
@@ -377,9 +378,9 @@ body{
   }
 
   .highschool {
-    position: absolute;
-    top: -50px;
-    right: 485px;
+    position: static;
+    top: 120px;
+    left: -100%;
   }
 
   .middleschool {
@@ -404,10 +405,10 @@ body{
       flex-direction: column;
       align-items: flex-start;
       display: flex;
-      position: relative;
+      position: sticky;
       color: black;
       font-family: parisNineteenSeventy;
-      top: -1200px;
+      top: 2%;
       background-color: white;
   }
 
@@ -696,11 +697,11 @@ body{
   .phone-image {
     display: flex;
     position: relative;
-    top:0px;
     background-position: fixed;
     background: url(pictures/phone\ background.png);
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position-y: 50px;
 }
 
 .lscreen {
@@ -735,10 +736,10 @@ body{
     flex-direction: column;
     align-items: flex-start;
     display: flex;
-    position: relative;
+    position: sticky;
     color: black;
     font-family: parisNineteenSeventy;
-    top: -1200px;
+    top: 2%;
     background-color: white;
 }
 
@@ -754,7 +755,7 @@ body{
     display: none;
     width: 100%;
     position: relative;
-    left: 125px;
+    left: 100px;
     top: -30px;
 }
 
