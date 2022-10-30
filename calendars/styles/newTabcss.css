@@ -1,0 +1,77 @@
+.todo-list{
+    border: 5px solid black;
+    overflow: auto;
+    height: 95%;
+    width: 100%;
+    position: relative;
+    bottom: 7px;
+}
+.todo-list table{
+    border-collapse: collapse;
+    text-align: center;
+    margin: 5px;
+    width: 100%;
+    white-space: nowrap;
+}
+.todo-list th{
+    border-bottom: 2px solid black;
+    height: 20px;
+}
+.todo-list tr{
+    border-bottom: 2px solid black;
+}
+tr#firstTr{
+    border: none;
+}
+#firstTr th{
+    border: none;
+}
+td.table_index{
+    min-width: 50px;
+    height: 40px;
+}
+td.td0{
+    min-width: 100px;
+}
+td.td1{
+    min-width: 100px;
+}
+td.td2{
+    min-width: 80px;
+}
+td.td3{
+    min-width: 150px;
+}
+td.td4{
+    min-width: 200px;
+}
+td.td5{
+    min-width: 100px;
+}
+th{
+    background: black;
+    color: white;
+}
+th.mleft{
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%;
+}
+th.mright{
+    border-top-right-radius: 15%;
+    border-bottom-right-radius: 15%;
+}
+.todo-list::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.todo-list::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+.todo-list::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 5px black;
+}
